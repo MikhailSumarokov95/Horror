@@ -1,0 +1,608 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.7f1 (24e8595d6d43) revision 2418777'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 4087 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/ykpon/Desktop/Unity/TestProject/My TestPrject
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+51773
+Successfully changed project path to: C:/Users/ykpon/Desktop/Unity/TestProject/My TestPrject
+C:/Users/ykpon/Desktop/Unity/TestProject/My TestPrject
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 231.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.7f1 (24e8595d6d43)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/ykpon/Desktop/Unity/TestProject/My TestPrject/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTS 450 (ID=0x1245)
+    Vendor:   NVIDIA
+    VRAM:     979 MB
+    Driver:   23.21.13.8813
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56620
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.019297 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 181.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.215 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1216ms)
+		BeginReloadAssembly (132ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (888ms)
+			LoadAssemblies (129ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (199ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (539ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (115ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (181ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (166ms)
+				ProcessInitializeOnLoadMethodAttributes (74ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.018046 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\TestProject\My TestPrject\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\TestProject\My TestPrject\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.309 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4310ms)
+		BeginReloadAssembly (340ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (173ms)
+		EndReloadAssembly (3748ms)
+			LoadAssemblies (162ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (479ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (100ms)
+			SetupLoadedEditorAssemblies (2928ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (49ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (165ms)
+				ProcessInitializeOnLoadAttributes (722ms)
+				ProcessInitializeOnLoadMethodAttributes (1973ms)
+				AfterProcessingInitializeOnLoad (15ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 2.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4010 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 133 unused Assets / (118.5 KB). Loaded Objects now: 4397.
+Memory consumption went from 158.3 MB to 158.2 MB.
+Total: 19.746100 ms (FindLiveObjects: 2.193600 ms CreateObjectMapping: 0.299900 ms MarkObjects: 15.850700 ms  DeleteObjects: 1.399600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 95303.124632 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode 1.prefab
+  artifactKey: Guid(d4778c2f3de39c74581809aae9137b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode 1.prefab using Guid(d4778c2f3de39c74581809aae9137b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bea9174c5fce6c28bacede5e06d1a937') in 0.204260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 111.102580 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e06dc524501b4a65a18d3d20a80e7550') in 0.071107 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.847406 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '382d822926dba91f35737dbf0ac0ef0c') in 0.037398 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.955540 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8821b6941e5a1e13c60ad58121ce9db8') in 0.037269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.007510 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceae8fe896f27aff2d2ef1dd9e8d55f0') in 0.035274 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 59.323554 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7753fddc1f02300d1d971220e47375c8') in 0.040408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.218628 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5015d42cc1de9db987eff37f994c811') in 0.039409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.186646 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd919e22d22e9de1b3c0471a7f932b911') in 0.044637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.926323 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7db0adda7146cba2184de7e8fc03f066') in 0.034635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.135168 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83a96edcd5332bcdf05e1a1e81488878') in 0.041995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.802605 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2a503c3f1ca0f0bc7fcf0297d48bf22') in 0.037296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.760595 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a5e3ec337d3a0f63894f97e13cb06de') in 0.035614 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.743939 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd307d2fa66427d30fdd640ba6f5f5b31') in 0.040131 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.977499 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd654da1f5d7facbe1548775d995eb1ee') in 0.034835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.607233 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f13b5970499e5b8644c5719a9eab5859') in 0.038326 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.819167 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '239481517331c0399b219bbcfa37aa48') in 0.045632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.949974 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08139f9ad4ce7d041e5f9aa76f23be4c') in 0.037938 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.629687 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '787ba4eb9d81c90e3955d4db843c5b56') in 0.036053 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.636691 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a3822aa719999c9c1223a7fe59c18de') in 0.040843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.774854 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbb4703726cc34bc44d8ce1d8010bd80') in 0.036900 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.990618 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7f5129db480278de568b0234a9f984d') in 0.038548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.191113 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '484544452a5e0b7293b7cd1fbb61461a') in 0.039317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.564825 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '443e13e07ec260b606e5a9708a1493a9') in 0.039509 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.570419 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e5ebfae1bf12efa7cb5cd75930c9c3') in 0.035430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.963974 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d89c2d4eccbdff93365e7a4ab1ef047') in 0.039261 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.184371 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb3f9b533b7d2a4d414558d8387838da') in 0.040741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.442470 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93082875e2d6897e8a21b5d99a540123') in 0.041078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.749553 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cbfe2972f40b867641cbcd189b7ee7c') in 0.038394 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.997501 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '509510300593974c4c16c15f19266ad9') in 0.037245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.206892 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3104fe15f8183a214a836caa7b88b89a') in 0.038213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.418340 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8550d95afecbcde531cea821286a0c95') in 0.035533 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.844544 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa7b6548f3a5f9d35c6624948f15a4a1') in 0.035668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.384064 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '021919d3c81694f930c940561d44b3f0') in 0.036094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.140419 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6354f1a481c43c13f24256750495b88a') in 0.041436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.006086 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e05a96e90137cf622baf005c7266381d') in 0.034699 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 35.187656 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7e44b1db7afcba4102ae19bcd00e63b') in 0.036521 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.646755 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a73570dc3b5010f1069566339a7fadcb') in 0.035683 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.187233 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a32963308ffb86f35381f8cb216d5ee4') in 0.040747 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.149965 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dc346cdda783c19d0174c6549fb761f') in 0.041584 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.553650 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdeec3a11b88c6346b966ab08485b3c8') in 0.035803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.968529 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a663406b2044929185d0d496514eeeb') in 0.038023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.308724 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2565dcd5b53dd4cf9f6b682612daa16a') in 0.043398 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.573402 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '575d72e44a716e404ec2cc9d1594e497') in 0.035894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.126855 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21ad10daf5fea83dc1c5c61fe3269402') in 0.038902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.854359 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e041754baeb1f26b9e1739b97dffb82b') in 0.036923 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.631590 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2df8b81cfb8eea3355ad1b6f2647397b') in 0.043364 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.075484 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '763655eb81207c5e1cde38728ddeea3d') in 0.039114 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.139072 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2404f869e0b010510811efc9859a9fdd') in 0.045413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.567289 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3be8d5555e4407269dd76731a3ca547a') in 0.034140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.569577 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c23abbdc431e17e1c9885b708fcc1d1') in 0.034769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.559911 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d75ae7d8a335861af532fd6ecddcdb') in 0.041014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.465887 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16fcc7fb0085e86ec870db01ec3253e0') in 0.034854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.347754 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05d065410853756a0abc307c14379b30') in 0.038998 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.498792 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f240cb0403235ebbbb3c6b567d7ae9f') in 0.038582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.176697 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec8d3b8698392c38eda63eff682399e6') in 0.038010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.966962 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23b5e5689f8009ee097d66e4ff8a4a3b') in 0.041691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.421103 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca5e4d128048aa88935a6d78e758aa26') in 0.039352 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.008348 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34afac84772fc36d70c162bdf65020d8') in 0.038004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.974781 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cfeee062ed3111021d0340c5d5134a8') in 0.039680 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.994626 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52cc81d539cf6c139c2a79289b3abf38') in 0.037799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.338957 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dad9c0d3194cbfacf23d165eb19614a7') in 0.041727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.559651 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae644121b73341c84924d8278a50b8b') in 0.039962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.784990 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44be055a397a5ec359be33f55f30e394') in 0.036287 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.730979 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09abf0cae7b1552a4534e83e7aa313a5') in 0.040057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.390092 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b96e66ad14861ec176ace12ff831d32a') in 0.037254 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.528023 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25d755e4b8fa28fa08922f40962b15b1') in 0.036210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.705925 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6636ade9292b1a48ab5ba895e461ec4') in 0.043172 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.347566 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27b32802534b7b5aac9926f14066d976') in 0.035873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.692985 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da7868a8338f212130ad91a6b9a398d0') in 0.039998 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.608895 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a924c4f5076cdafe03f26496a03be060') in 0.033810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.118198 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode.prefab
+  artifactKey: Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode.prefab using Guid(91bcc9fe030323e41be43dd6a07e5a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a6b1f747649fac61a3290802d38153e') in 0.038968 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.243225 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode 1.prefab
+  artifactKey: Guid(d4778c2f3de39c74581809aae9137b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode 1.prefab using Guid(d4778c2f3de39c74581809aae9137b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f766f10349afa55143d647c8384cf687') in 0.049783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.284340 seconds.
+  path: Assets/Level/Prefabs/SurvivalMode 1.prefab
+  artifactKey: Guid(d4778c2f3de39c74581809aae9137b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/SurvivalMode 1.prefab using Guid(d4778c2f3de39c74581809aae9137b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54091ded35da49ff4d89179b1be33534') in 0.040463 seconds 
