@@ -28,13 +28,11 @@ public class SurvivalMode : Level
 
     private void Start()
     {
-        //_timerTMP = GameObject.FindGameObjectWithTag("TimerSurvivalMode").GetComponent<TMP_Text>();
-        //timer = float.Parse(_timerTMP.text);
         _timerTMP = GameObject.FindGameObjectWithTag("TimerSurvivalMode").GetComponent<TMP_Text>();
-        Timer = timerTimeDependingOnTheLevelNumber[NumberLevel]; 
-        CreateRandomObjectsOnLevel(battery, amountBattery);
-        CreateRandomObjectsOnLevel(powerEngineer, amountPowerEnginner);
-        CreateRandomObjectsOnLevel(coin, amountCoin);
+        Timer = timerTimeDependingOnTheLevelNumber[NumberLevel];
+        _map.CreateRandomObjectsOnLevel(battery, amountBattery);
+        _map.CreateRandomObjectsOnLevel(powerEngineer, amountPowerEnginner);
+        _map.CreateRandomObjectsOnLevel(coin, amountCoin);
     }
 
     private void OnDestroy()

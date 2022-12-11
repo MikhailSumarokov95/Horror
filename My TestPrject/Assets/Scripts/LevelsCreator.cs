@@ -3,29 +3,37 @@ using UnityEngine.AI;
 
 public class LevelsCreator : MonoBehaviour
 {
-    public int NumberCurrentLevel { get; private set; } 
+    public int NumberCurrentLevel { get; private set; }
 
+    [SerializeField] private GameObject[] modeForLevelNumberPrefabs;
+    [SerializeField] private GameObject[] mapPrefabs;
     [SerializeField] private GameObject menuRoom;
-    [SerializeField] private GameObject[] levels;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject monster;
-    [SerializeField] private Flashlight flashlight;
+    
     private GameObject currentLevel;
+
+    public enum Mode
+    {
+        Survival,
+        Escape
+    }
+
 
     private void Start()
     {
         menuRoom.SetActive(true);
-        foreach (var level in levels)
-            if (level.GetComponent<Level>() == null) Debug.LogError("Level does not contain script \"Level\"");
+        //foreach (var level in levels)
+        //    if (level.GetComponent<Level>() == null) Debug.LogError("Level does not contain script \"Level\"");
     }
 
     public void CreateLevel(int number)
     {
         menuRoom.SetActive(false);
         Destroy(currentLevel);
-        currentLevel = Instantiate(levels[number], Vector3.zero, Quaternion.identity);
+        var numberMap = Random.Range(0, mapPrefabs.Length);
+        currentLevel = Instantiate(mapPrefabs[numberMap], Vector3.zero, Quaternion.identity);
         InitializationLevel(number);
-        
     }
 
     public void ReturnMenu()
@@ -38,15 +46,15 @@ public class LevelsCreator : MonoBehaviour
 
     private void InitializationLevel(int number)
     {
-        var level = currentLevel.GetComponent<Level>();
+        Instantiate(modeForLevelNumberPrefabs[number], currentLevel.transform);
+        var level = FindObjectOfType<Level>();
         level.NumberLevel = NumberCurrentLevel = number;
         player.SetActive(false);
         monster.SetActive(false);
         player.SetActive(true);
         monster.SetActive(true);
-        player.transform.SetPositionAndRotation(level.PointPlayerSpawn.position, level.PointPlayerSpawn.rotation);
-        monster.transform.SetPositionAndRotation(level.PointMonsterSpawn.position, level.PointMonsterSpawn.rotation);
-
-
+        var map = currentLevel.GetComponent<Map>();
+        player.transform.SetPositionAndRotation(map.PointPlayerSpawn.position, map.PointPlayerSpawn.rotation);
+        monster.transform.SetPositionAndRotation(map.PointMonsterSpawn.position, map.PointMonsterSpawn.rotation);
     }
 }
