@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,21 +11,12 @@ public class LevelsCreator : MonoBehaviour
     [SerializeField] private GameObject menuRoom;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject monster;
-    
     private GameObject currentLevel;
-
-    public enum Mode
-    {
-        Survival,
-        Escape
-    }
-
 
     private void Start()
     {
         menuRoom.SetActive(true);
-        //foreach (var level in levels)
-        //    if (level.GetComponent<Level>() == null) Debug.LogError("Level does not contain script \"Level\"");
+        CheckPrefabs();
     }
 
     public void CreateLevel(int number)
@@ -33,7 +25,10 @@ public class LevelsCreator : MonoBehaviour
         Destroy(currentLevel);
         var numberMap = Random.Range(0, mapPrefabs.Length);
         currentLevel = Instantiate(mapPrefabs[numberMap], Vector3.zero, Quaternion.identity);
-        InitializationLevel(number);
+        //InitializationLevel(number);
+        player.SetActive(false);
+        monster.SetActive(false);
+        StartCoroutine(WaitOneFrameAndInitializationLevel(number));
     }
 
     public void ReturnMenu()
@@ -46,15 +41,30 @@ public class LevelsCreator : MonoBehaviour
 
     private void InitializationLevel(int number)
     {
+        var map = currentLevel.GetComponent<Map>();
         Instantiate(modeForLevelNumberPrefabs[number], currentLevel.transform);
         var level = FindObjectOfType<Level>();
         level.NumberLevel = NumberCurrentLevel = number;
-        player.SetActive(false);
-        monster.SetActive(false);
+        map.GetComponent<NavMeshSurface>().BuildNavMesh();
         player.SetActive(true);
         monster.SetActive(true);
-        var map = currentLevel.GetComponent<Map>();
         player.transform.SetPositionAndRotation(map.PointPlayerSpawn.position, map.PointPlayerSpawn.rotation);
         monster.transform.SetPositionAndRotation(map.PointMonsterSpawn.position, map.PointMonsterSpawn.rotation);
+    }
+
+    private IEnumerator WaitOneFrameAndInitializationLevel(int number)
+    {
+        yield return null;
+        InitializationLevel(number);
+        //yield break;
+    }
+
+    private void CheckPrefabs()
+    {
+        foreach (var mode in modeForLevelNumberPrefabs)
+            if (mode.GetComponent<Level>() == null) Debug.LogError("No script inherited from \"Level\" script");
+
+        foreach (var map in mapPrefabs)
+            if (map.GetComponent<Map>() == null) Debug.LogError("Map does not contain script \"Map\"");
     }
 }

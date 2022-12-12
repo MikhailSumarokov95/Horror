@@ -9,9 +9,13 @@ public class Level : MonoBehaviour
 
     protected Map _map;
 
-    public void WinLevel()
+    protected void Start()
     {
         _map = FindObjectOfType<Map>();
+    }
+
+    public void WinLevel()
+    {
         FindObjectOfType<LevelsProgress>().OpenLevel(NumberLevel + 1);
         FindObjectOfType<GameManager>().OnWin();
     }

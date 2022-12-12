@@ -17,6 +17,7 @@ public class EscapeMode : Level
 
     private void Start()
     {
+        base.Start();
         _map.CreateRandomObjectsOnLevel(key, amountKey);
     }
 
