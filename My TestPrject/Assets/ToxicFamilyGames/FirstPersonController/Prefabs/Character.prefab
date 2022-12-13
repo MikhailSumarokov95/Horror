@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 1041771245906083022}
   - component: {fileID: 1041771245906083017}
   - component: {fileID: 1570061319}
+  - component: {fileID: 7660788167717630294}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1041771245906083023
 Transform:
   m_ObjectHideFlags: 0
@@ -86,11 +87,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e6307ecd70f5c439ebff741ac7c2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSens: 515
   movementSpeed: 5
   gravity: 9.81
   joystick: {fileID: 0}
   touchSystem: {fileID: 0}
+  gameManager: {fileID: 0}
+  generalSetting: {fileID: 0}
   head: {fileID: 2240953499094037597}
   isLocked: 0
 --- !u!114 &1570061319
@@ -105,11 +107,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6168085ab9d6b4e9632be969d13f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distaceSearchObject: 2
   pickUpButton: {fileID: 0}
   pickUpText: {fileID: 0}
   energy: {fileID: 0}
   flashlight: {fileID: 0}
   coins: {fileID: 0}
+--- !u!136 &7660788167717630294
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041771245906083020}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &1041771246798443880
 GameObject:
   m_ObjectHideFlags: 0

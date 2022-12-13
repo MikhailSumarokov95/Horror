@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class Monster : MonoBehaviour
 {
+    public bool IsGameOver { get { return _level.IsGameOver; } }
     public bool SetMove { get; set; }
     public bool IsMonsterVisible { get; private set; }
     [SerializeField] private float visibilityDistance = 10f;
@@ -11,6 +12,7 @@ public class Monster : MonoBehaviour
     private float _distanceToPlayer;
     private NavMeshAgent _monsterNMA;
     private CapsuleCollider _monsterCollider;
+    private Level _level;
 
     private void Start()
     {
@@ -18,10 +20,16 @@ public class Monster : MonoBehaviour
         _monsterNMA = GetComponent<NavMeshAgent>();
     }
 
+    private void OnEnable()
+    {
+        _level = FindObjectOfType<Level>();
+    }
+
     private void FixedUpdate()
     {
+        if (IsGameOver) return;
         DetermineVisibility();
-        if (!IsMonsterVisible || SetMove) Move();
+        if (!IsMonsterVisible && !SetMove) Move();
         else _monsterNMA.isStopped = true;
     }
 
@@ -36,11 +44,7 @@ public class Monster : MonoBehaviour
     private void MoveToPlayer()
     {
         _monsterNMA.destination = Camera.main.gameObject.transform.position;
-        if (_monsterNMA.remainingDistance < distanceToPlayerGameOver)
-        {
-            transform.LookAt(Camera.main.transform.position);
-            FindObjectOfType<Level>().LossLevel();
-        }
+        if (_monsterNMA.remainingDistance < distanceToPlayerGameOver) NeckTwist();
     }
 
     private void RandomMove()
@@ -98,5 +102,12 @@ public class Monster : MonoBehaviour
                 else IsMonsterVisible = false;
             }
         }
+    }
+
+    private void NeckTwist()
+    {
+        transform.LookAt(Camera.main.transform.position);
+        FindObjectOfType<Level>().LossLevel();
+        GetComponent<MonsterSound>().PlayNeckTwist();
     }
 }

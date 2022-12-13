@@ -1557,7 +1557,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 150, y: -150}
-  m_SizeDelta: {x: 150, y: 150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228405098
 MonoBehaviour:
@@ -1635,8 +1635,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 449ebb74b1d561e45803b7898c3706c6, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2161,14 +2161,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1974864968}
     - target: {fileID: 974324549, guid: ada8616df63feb64b9889d513160d53d, type: 3}
-      propertyPath: speed
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 974324549, guid: ada8616df63feb64b9889d513160d53d, type: 3}
-      propertyPath: forcedSpeed
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 974324549, guid: ada8616df63feb64b9889d513160d53d, type: 3}
       propertyPath: isDischargedImage
       value: 
       objectReference: {fileID: 2097777052}
@@ -2176,25 +2168,9 @@ PrefabInstance:
       propertyPath: isNotDischargedImage
       value: 
       objectReference: {fileID: 434259718}
-    - target: {fileID: 5140805971796711163, guid: ada8616df63feb64b9889d513160d53d, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5140805971844660529, guid: ada8616df63feb64b9889d513160d53d, type: 3}
       propertyPath: m_Name
       value: Eyes
-      objectReference: {fileID: 0}
-    - target: {fileID: 5140805971844660529, guid: ada8616df63feb64b9889d513160d53d, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5140805971844660529, guid: ada8616df63feb64b9889d513160d53d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5140805971844660530, guid: ada8616df63feb64b9889d513160d53d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5140805971844660532, guid: ada8616df63feb64b9889d513160d53d, type: 3}
       propertyPath: m_Camera
@@ -2296,14 +2272,6 @@ PrefabInstance:
       propertyPath: isCloseButton
       value: 
       objectReference: {fileID: 1487418644}
-    - target: {fileID: 5140805972538060523, guid: ada8616df63feb64b9889d513160d53d, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6025603911999993434, guid: ada8616df63feb64b9889d513160d53d, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ada8616df63feb64b9889d513160d53d, type: 3}
 --- !u!1 &336554819
@@ -2324,7 +2292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &336554820
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5316,7 +5284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26deaaee54961f04ead5ded02a74a7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsMobile: 1
+  IsMobile: 0
   menuRoom: {fileID: 158151759}
   winTable: {fileID: 2025000424}
   lossTable: {fileID: 470418382}
@@ -8327,6 +8295,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 170979193317544277, guid: 8c41c966fdcc34c4a9b96e82e26a8fa5, type: 3}
+      propertyPath: neckTwistSound
+      value: 
+      objectReference: {fileID: 6852249119654732566, guid: abf764fe26001654cbe2561ff13bf43d, type: 3}
     - target: {fileID: 5522296018237041464, guid: 8c41c966fdcc34c4a9b96e82e26a8fa5, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -8371,24 +8343,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6791666549601184413, guid: 8c41c966fdcc34c4a9b96e82e26a8fa5, type: 3}
-      propertyPath: m_Height
-      value: 2.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791666549601184413, guid: 8c41c966fdcc34c4a9b96e82e26a8fa5, type: 3}
-      propertyPath: m_Center.y
-      value: 1.36
-      objectReference: {fileID: 0}
     - target: {fileID: 7607008701152439515, guid: 8c41c966fdcc34c4a9b96e82e26a8fa5, type: 3}
       propertyPath: m_Name
-      value: Monster
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607008701152439515, guid: 8c41c966fdcc34c4a9b96e82e26a8fa5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607008701152439515, guid: 8c41c966fdcc34c4a9b96e82e26a8fa5, type: 3}
-      propertyPath: m_TagString
       value: Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8854,7 +8810,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6343823bdf156a6459f30171834d50e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf5aea2d1bde95444a8fb5880d378a9d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8899,18 +8855,10 @@ PrefabInstance:
       propertyPath: pickUpButton
       value: 
       objectReference: {fileID: 1513994157}
-    - target: {fileID: 1570061319, guid: 2b58c60f225eed8469439eb28ec4a9a0, type: 3}
-      propertyPath: distaceSearchObject
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1041771245906083017, guid: 2b58c60f225eed8469439eb28ec4a9a0, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 526985206}
-    - target: {fileID: 1041771245906083017, guid: 2b58c60f225eed8469439eb28ec4a9a0, type: 3}
-      propertyPath: touchSens
-      value: 150
-      objectReference: {fileID: 0}
     - target: {fileID: 1041771245906083017, guid: 2b58c60f225eed8469439eb28ec4a9a0, type: 3}
       propertyPath: gameManager
       value: 
@@ -12829,7 +12777,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24764
+  m_Name: pb_Mesh24740
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13159,7 +13107,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 125, y: 250}
+  m_SizeDelta: {x: 210, y: 330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097777051
 MonoBehaviour:
@@ -13237,7 +13185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 920b833c44d053244b2ff19268b6614a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb673c5ddabad849b8d755cfde6352e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13985,22 +13933,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 807250895300103653, guid: e671f6df5ee10db47b68576c180a6f24, type: 3}
-      propertyPath: Eyes
-      value: 
-      objectReference: {fileID: 411247286}
-    - target: {fileID: 807250895300103653, guid: e671f6df5ee10db47b68576c180a6f24, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1475782372}
-    - target: {fileID: 807250895300103653, guid: e671f6df5ee10db47b68576c180a6f24, type: 3}
-      propertyPath: flashlight
-      value: 
-      objectReference: {fileID: 1144879804}
-    - target: {fileID: 807250895300103653, guid: e671f6df5ee10db47b68576c180a6f24, type: 3}
-      propertyPath: choiceLevelPanel
-      value: 
-      objectReference: {fileID: 779850813}
     - target: {fileID: 878291610706817762, guid: e671f6df5ee10db47b68576c180a6f24, type: 3}
       propertyPath: m_Name
       value: MenuRoom
@@ -14015,7 +13947,7 @@ PrefabInstance:
       objectReference: {fileID: 2042621652}
     - target: {fileID: 2979008754281796295, guid: e671f6df5ee10db47b68576c180a6f24, type: 3}
       propertyPath: m_VersionIndex
-      value: 3862
+      value: 3868
       objectReference: {fileID: 0}
     - target: {fileID: 3993068278504106688, guid: e671f6df5ee10db47b68576c180a6f24, type: 3}
       propertyPath: m_Mesh

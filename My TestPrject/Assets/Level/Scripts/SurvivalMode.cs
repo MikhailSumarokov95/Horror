@@ -43,11 +43,11 @@ public class SurvivalMode : Level
 
     private void Update()
     {
-        if (isGameOver) return;
+        if (IsGameOver) return;
         if (Timer < 0)
         {
             WinLevel();
-            isGameOver = true;
+            IsGameOver = true;
         }
         Timer -= Time.deltaTime;
     }

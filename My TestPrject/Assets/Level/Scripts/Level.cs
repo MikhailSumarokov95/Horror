@@ -5,7 +5,7 @@ public class Level : MonoBehaviour
 {
     public int NumberLevel { get; set; }
 
-    protected bool isGameOver;
+    public bool IsGameOver;
 
     protected Map _map;
 
@@ -22,8 +22,8 @@ public class Level : MonoBehaviour
 
     public void LossLevel()
     {
-        if (isGameOver) return;
-        isGameOver = true;
+        if (IsGameOver) return;
+        IsGameOver = true;
         FindObjectOfType<GameManager>().OnLoss();
         FindObjectOfType<Character>().IsBrokenNeck = true;
     }

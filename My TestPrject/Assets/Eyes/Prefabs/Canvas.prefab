@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5140805971796711164}
   - component: {fileID: 5140805971796711166}
   - component: {fileID: 5140805971796711165}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5140805971844660533
 RectTransform:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5140805971844660529}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -214,6 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69e82af951b42342b9a3b6d2e6e2f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOpenButton: {fileID: 0}
+  isCloseButton: {fileID: 0}
+  gameManager: {fileID: 0}
   length: 0.8
   delay: 5
 --- !u!114 &974324549
@@ -228,10 +231,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c6758abd9d2eb499932b37e0455e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.002
-  forcedSpeed: 0.005
+  speed: 0.02
+  forcedSpeed: 0.04
   value: 1
   bar: {fileID: 0}
+  isNotDischargedImage: {fileID: 0}
+  isDischargedImage: {fileID: 0}
   onZeroEnergy:
     m_PersistentCalls:
       m_Calls: []
@@ -246,7 +251,7 @@ GameObject:
   - component: {fileID: 5140805972538060524}
   - component: {fileID: 5140805972538060526}
   - component: {fileID: 5140805972538060525}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}

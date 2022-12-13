@@ -7068,6 +7068,7 @@ GameObject:
   - component: {fileID: 1707081902633276887}
   - component: {fileID: 1512993987286216748}
   - component: {fileID: -5018291014014235685}
+  - component: {fileID: -3062311447772263659}
   m_Layer: 0
   m_Name: 2 Map
   m_TagString: Untagged
@@ -10938,6 +10939,26 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &-3062311447772263659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707081902633276886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3967eff0b58d08c48b544de46ef4d3e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backGroundMusic:
+  - {fileID: 2582028805962358103, guid: dd8e63159e559804a8c6825f3837855f, type: 3}
+  - {fileID: 7794381376186918714, guid: e3751f5f8973df440aa37ec8d51c8b40, type: 3}
+  - {fileID: 3007842761686877019, guid: 12786d6190f4e5142a26ed62f786c50b, type: 3}
+  secondarySounds:
+  - {fileID: 2004586901409868727, guid: eda4feaee5fc7c94e8a21d61bfa93d2b, type: 3}
+  - {fileID: 0}
+  delayBetweenSecondarySounds: 10
 --- !u!1 &1707081902639791074
 GameObject:
   m_ObjectHideFlags: 0
