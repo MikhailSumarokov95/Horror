@@ -4,7 +4,7 @@ using UnityEngine;
 public class MenuRoom : MonoBehaviour
 {
     [SerializeField] private GameObject monsterPrefab;
-    [SerializeField] private Transform[] monsterSpawmPoint;
+    [SerializeField] private Transform[] monsterSpawnPoint;
     private GameObject monster;
     private Coroutine transferMonsterCoroutine;
     private GameManager gameManager;
@@ -17,7 +17,7 @@ public class MenuRoom : MonoBehaviour
     private void OnEnable()
     {
         if (!gameManager.IsMobile) Cursor.lockState = CursorLockMode.None;
-        monster = Instantiate(monsterPrefab, monsterSpawmPoint[0].position, monsterSpawmPoint[0].rotation);
+        monster = Instantiate(monsterPrefab, monsterSpawnPoint[0].position, monsterSpawnPoint[0].rotation);
         monster.transform.SetParent(gameObject.transform);
         transferMonsterCoroutine = StartCoroutine(TransferMonster());
     }
@@ -33,10 +33,10 @@ public class MenuRoom : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(5);
-            var numberSpawnPoint = Random.Range(0, monsterSpawmPoint.Length);
-            monster.transform.SetPositionAndRotation(monsterSpawmPoint[numberSpawnPoint].position,
-                monsterSpawmPoint[numberSpawnPoint].rotation);
+            yield return new WaitForSeconds(2);
+            var numberSpawnPoint = Random.Range(0, monsterSpawnPoint.Length);
+            monster.transform.SetPositionAndRotation(monsterSpawnPoint[numberSpawnPoint].position,
+                monsterSpawnPoint[numberSpawnPoint].rotation);
         }
     }
 }

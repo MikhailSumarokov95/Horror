@@ -22,6 +22,7 @@ public class MonsterSound : MonoBehaviour
     {
         theMonsterSeesThePlayerSound.gameObject.SetActive(false);
         var neckTwist = Instantiate(neckTwistSound.gameObject, transform);
+        neckTwist.GetComponent<AudioSource>().Play();
         Destroy(neckTwist, neckTwist.GetComponent<AudioSource>().clip.length);
     }
 

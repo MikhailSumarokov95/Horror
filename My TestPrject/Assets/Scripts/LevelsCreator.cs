@@ -11,6 +11,7 @@ public class LevelsCreator : MonoBehaviour
     [SerializeField] private GameObject menuRoom;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject monster;
+    public LightingSettings lightingSettings;
     private GameObject currentLevel;
 
     private void Start()
@@ -25,7 +26,6 @@ public class LevelsCreator : MonoBehaviour
         Destroy(currentLevel);
         var numberMap = Random.Range(0, mapPrefabs.Length);
         currentLevel = Instantiate(mapPrefabs[numberMap], Vector3.zero, Quaternion.identity);
-        //InitializationLevel(number);
         player.SetActive(false);
         monster.SetActive(false);
         StartCoroutine(WaitOneFrameAndInitializationLevel(number));
@@ -56,7 +56,6 @@ public class LevelsCreator : MonoBehaviour
     {
         yield return null;
         InitializationLevel(number);
-        //yield break;
     }
 
     private void CheckPrefabs()

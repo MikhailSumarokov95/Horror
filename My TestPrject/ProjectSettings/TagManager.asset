@@ -11,11 +11,13 @@ TagManager:
   - Key
   - NumberFoundKeysText
   - Monster
+  - Reward
+  - Ads
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - FurnitureLevel
   - Water
   - UI
   - 
