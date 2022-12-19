@@ -87,14 +87,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e6307ecd70f5c439ebff741ac7c2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLocked: 0
   movementSpeed: 5
   gravity: 9.81
+  maxUpHead: 30
+  maxDownHead: -80
   joystick: {fileID: 0}
   touchSystem: {fileID: 0}
   gameManager: {fileID: 0}
   generalSetting: {fileID: 0}
   head: {fileID: 2240953499094037597}
-  isLocked: 0
 --- !u!114 &1570061319
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theMonsterSeesThePlayerSound: {fileID: 115788359731602542}
+  neckTwistSound: {fileID: 6852249119654732566, guid: abf764fe26001654cbe2561ff13bf43d, type: 3}
 --- !u!1001 &377265515203465974
 PrefabInstance:
   m_ObjectHideFlags: 0

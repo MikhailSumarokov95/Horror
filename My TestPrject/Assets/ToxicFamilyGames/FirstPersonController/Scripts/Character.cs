@@ -14,10 +14,15 @@ namespace ToxicFamilyGames.FirstPersonController
 
         public bool IsBrokenNeck { get; set; }
 
+        public bool isLocked;
         [SerializeField]
         private float movementSpeed = 10;
         [SerializeField]
         private float gravity = 9.81f;
+        [SerializeField]
+        private float maxUpHead = 30; 
+        [SerializeField]
+        private float maxDownHead = - 15;
         [SerializeField]
         private Joystick joystick;
         [SerializeField]
@@ -28,10 +33,9 @@ namespace ToxicFamilyGames.FirstPersonController
         private GeneralSetting generalSetting;
         [SerializeField]
         private GameObject head;
-        public bool isLocked;
         private Animator animator;
+        private float _moveX = 0;
         private CharacterController characterController;
-        [SerializeField] 
 
 
         private void Start()
@@ -80,11 +84,16 @@ namespace ToxicFamilyGames.FirstPersonController
             }
         }
 
+        
         private void CameraUpdate()
         {
             Vector2 mouse = Mouse * generalSetting.TurningSpeed * Time.deltaTime;
-            head.transform.Rotate(Vector3.right, - mouse.y);
+
             transform.Rotate(Vector3.up, mouse.x);
+
+            _moveX += mouse.y;
+            _moveX = Mathf.Clamp(_moveX, maxDownHead, maxUpHead);
+            head.transform.localEulerAngles = new Vector3 (- _moveX, head.transform.localEulerAngles.y, 0);
 
             float moveMagnitude = Move.magnitude;
             if ((this.moveMagnitude == 0 && moveMagnitude != 0) ||
