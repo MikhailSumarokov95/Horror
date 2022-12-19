@@ -11,7 +11,6 @@ public class LevelsCreator : MonoBehaviour
     [SerializeField] private GameObject menuRoom;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject monster;
-    public LightingSettings lightingSettings;
     private GameObject currentLevel;
 
     private void Start()

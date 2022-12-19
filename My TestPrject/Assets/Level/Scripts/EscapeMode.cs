@@ -13,11 +13,13 @@ public class EscapeMode : Level
     private void Awake()
     {
         numberFoundKeysText = GameObject.FindGameObjectWithTag("NumberFoundKeysText").GetComponent<TMP_Text>();
+        
     }
 
     private void Start()
     {
         base.Start();
+        numberFoundKeysText.text = "0";
         _map.CreateRandomObjectsOnLevel(key, amountKey);
     }
 
