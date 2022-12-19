@@ -14,8 +14,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject eyes;
     [SerializeField] private GeneralSetting generalSetting;
     [SerializeField] private GameInput gameInput;
-    [SerializeField] private KeyCode keyGoMenu;
-    private LevelsCreator levelCreator;
+    [SerializeField] private KeyCode keyPause;
+    private LevelsCreator _levelCreator;
+    private bool _pauseKeyLock;
 
     public bool IsPause { get; private set; }
 
@@ -23,19 +24,20 @@ public class GameManager : MonoBehaviour
     {
         gameInput.Awake();
         generalSetting.LoadSettings();
-        levelCreator = FindObjectOfType<LevelsCreator>();
+        _levelCreator = FindObjectOfType<LevelsCreator>();
         goPauseButton.SetActive(IsMobile);
         StartMenu();
     }
 
     private void Update()
     {
-        if (!IsMobile && Input.GetKeyDown(keyGoMenu) && !menuRoom.activeInHierarchy) 
+        if (!IsMobile && Input.GetKeyDown(keyPause) && !menuRoom.activeInHierarchy && !_pauseKeyLock) 
             OnPausePanel(!IsPause);
     }
 
     public void StartMenu()
     {
+        _pauseKeyLock = true;
         menuTable.SetActive(true);
         gameTable.SetActive(false);
         flashlight.SetActive(false);
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void StartLevel()
     {
+        _pauseKeyLock = false;
         menuTable.SetActive(false);
         gameTable.SetActive(true);
         flashlight.SetActive(true);
@@ -54,12 +57,14 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        levelCreator.CreateLevel(levelCreator.NumberCurrentLevel);
+        _pauseKeyLock = false;
+        _levelCreator.CreateLevel(_levelCreator.NumberCurrentLevel);
         OnPause(false);
     }
 
     public void OnWin()
     {
+        _pauseKeyLock = true;
         gameTable.SetActive(false);
         winTable.SetActive(true);
         OnPause(true);
@@ -67,6 +72,7 @@ public class GameManager : MonoBehaviour
 
     public void OnLoss()
     {
+        _pauseKeyLock = true;
         gameTable.SetActive(false);
         lossTable.SetActive(true);
         OnPause(true);
