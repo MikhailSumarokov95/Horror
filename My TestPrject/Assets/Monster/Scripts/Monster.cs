@@ -29,7 +29,7 @@ public class Monster : MonoBehaviour
     {
         if (IsGameOver) return;
         DetermineVisibility();
-        if (!IsMonsterVisible && !SetMove) Move();
+        if (!IsMonsterVisible || SetMove) Move();
         else _monsterNMA.isStopped = true;
     }
 

@@ -46,11 +46,6 @@ public class Energy : MonoBehaviour
 
     private void Update()
     {
-        print("eyes.CanControl " + eyes.CanControl);
-        print("eyes.IsOpen " + eyes.IsOpen);
-        print("eyes.IsForce " + eyes.IsForce);
-        print("Value " + Value);
-
         EnergyCheck();
         if (!eyes.IsOpen && !eyes.IsForce) return;
         if (eyes.IsForce)
@@ -76,5 +71,7 @@ public class Energy : MonoBehaviour
     {
         Value = 1;
         eyes.CanControl = true;
+        eyes.length = 1;
+        eyes.IsOpen = true;
     }
 }

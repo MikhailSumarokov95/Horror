@@ -25,8 +25,9 @@ public class Eyes : MonoBehaviour
             isCloseButton.gameObject.SetActive(!value);
         } 
     }
+
     public bool CanControl { get; set; } = true;
-    public bool IsOpen { get; private set; } = true;
+    public bool IsOpen { get; set; } = true;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -53,11 +54,11 @@ public class Eyes : MonoBehaviour
         if (time >= delay)
         {
             time = 0;
-            StartCoroutine(Blinck());
+            StartCoroutine(Blink());
         }
     }
 
-    private IEnumerator Blinck()
+    private IEnumerator Blink()
     {
         animator.SetBool("IsOpen", IsOpen = false);
         yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
