@@ -5518,7 +5518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26deaaee54961f04ead5ded02a74a7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsMobile: 0
+  IsMobile: 1
   menuRoom: {fileID: 158151759}
   winTable: {fileID: 2025000424}
   lossTable: {fileID: 470418382}
@@ -8857,6 +8857,22 @@ PrefabInstance:
     - target: {fileID: 2268999153169779190, guid: 7ff166dceb659f64f9114a538fa841b9, type: 3}
       propertyPath: isRewardAd
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268999153169779190, guid: 7ff166dceb659f64f9114a538fa841b9, type: 3}
+      propertyPath: unitIdGoogleInterAd
+      value: ca-app-pub-5967555698159024/5611826893
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268999153169779190, guid: 7ff166dceb659f64f9114a538fa841b9, type: 3}
+      propertyPath: unitIdYandexInterAd
+      value: R-M-2113286-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268999153169779190, guid: 7ff166dceb659f64f9114a538fa841b9, type: 3}
+      propertyPath: unitIdGoogleRewardAd
+      value: ca-app-pub-5967555698159024/8509452972
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268999153169779190, guid: 7ff166dceb659f64f9114a538fa841b9, type: 3}
+      propertyPath: unitIdYandexRewardAd
+      value: R-M-2113286-2
       objectReference: {fileID: 0}
     - target: {fileID: 2750424443849161065, guid: 7ff166dceb659f64f9114a538fa841b9, type: 3}
       propertyPath: m_Name
@@ -14005,6 +14021,7 @@ MonoBehaviour:
   - {fileID: 1832641837037474660, guid: e3a0c3b9685be334eba1e9ed6767404d, type: 3}
   - {fileID: 1707081902633276886, guid: b65471510f66f654a8bf31340639c6fa, type: 3}
   menuRoom: {fileID: 158151759}
+  GuadeMobile: {fileID: 1707081902633276886, guid: c8e4e28f2575b79449d2080bf8b55a8a, type: 3}
   player: {fileID: 1475782372}
   monster: {fileID: 1932341809}
 --- !u!114 &5893778521556246041

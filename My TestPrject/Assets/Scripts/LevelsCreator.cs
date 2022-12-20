@@ -9,6 +9,7 @@ public class LevelsCreator : MonoBehaviour
     [SerializeField] private GameObject[] modeForLevelNumberPrefabs;
     [SerializeField] private GameObject[] mapPrefabs;
     [SerializeField] private GameObject menuRoom;
+    [SerializeField] private GameObject GuadeMobile;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject monster;
     private GameObject currentLevel;
@@ -21,6 +22,11 @@ public class LevelsCreator : MonoBehaviour
 
     public void CreateLevel(int number)
     {
+        if (number == 0 && PlayerPrefs.GetInt("guade", 0) == 0)
+        {
+            CreateGuadeLevel();
+            return;
+        }
         menuRoom.SetActive(false);
         Destroy(currentLevel);
         var numberMap = Random.Range(0, mapPrefabs.Length);
@@ -65,4 +71,19 @@ public class LevelsCreator : MonoBehaviour
         foreach (var map in mapPrefabs)
             if (map.GetComponent<Map>() == null) Debug.LogError("Map does not contain script \"Map\"");
     }
+
+    private void CreateGuadeLevel()
+    {
+        menuRoom.SetActive(false);
+        currentLevel = Instantiate(GuadeMobile);
+        currentLevel.GetComponent<NavMeshSurface>().BuildNavMesh();
+        player.SetActive(true);
+        //monster.SetActive(true);
+        var map = currentLevel.GetComponent<Map>();
+        player.transform.SetPositionAndRotation(map.PointPlayerSpawn.position, map.PointPlayerSpawn.rotation);
+        monster.transform.SetPositionAndRotation(map.PointMonsterSpawn.position, map.PointMonsterSpawn.rotation);
+    }
+
+    [ContextMenu("ClearSaveGuade")]
+    public void ClearSaveGuade() => PlayerPrefs.SetInt("guade", 0);
 }
