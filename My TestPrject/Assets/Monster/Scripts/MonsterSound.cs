@@ -4,17 +4,23 @@ public class MonsterSound : MonoBehaviour
 {
     [SerializeField] private AudioSource theMonsterSeesThePlayerSound;
     [SerializeField] private AudioSource neckTwistSound;
-    private Monster monster;
+    private Monster _monster;
+    private BackRoundMusic _backRoundMusic;
 
     private void Start()
     {
-        theMonsterSeesThePlayerSound.gameObject.SetActive(false);
-        monster = GetComponent<Monster>();
+        _monster = GetComponent<Monster>();
+    }
+
+    private void OnEnable()
+    {
+        _backRoundMusic = FindObjectOfType<BackRoundMusic>();
+        SetPlayingMonsterSeesThePlayerSound(false);
     }
 
     private void Update()
     {
-        if (monster.IsGameOver) return;
+        if (_monster.IsGameOver) return;
         SearchPlayer();
     }
 
@@ -32,9 +38,15 @@ public class MonsterSound : MonoBehaviour
         if (Physics.Raycast(transform.position,
             Camera.main.transform.position - Camera.main.transform.up * 0.9f - transform.position, out hit))
         {
-            if (hit.collider.CompareTag("Player")) theMonsterSeesThePlayerSound.gameObject.SetActive(true);
-            else theMonsterSeesThePlayerSound.gameObject.SetActive(false);
+            if (hit.collider.CompareTag("Player")) SetPlayingMonsterSeesThePlayerSound(true);
+            else SetPlayingMonsterSeesThePlayerSound(false);
         }
-        else theMonsterSeesThePlayerSound.gameObject.SetActive(false);
+        else SetPlayingMonsterSeesThePlayerSound(false);
+    }
+
+    private void SetPlayingMonsterSeesThePlayerSound(bool value)
+    {
+        theMonsterSeesThePlayerSound.gameObject.SetActive(value);
+        _backRoundMusic.IsPause = value;
     }
 }

@@ -1,16 +1,33 @@
+using System.Collections;
 using UnityEngine;
 
 public class BackRoundMusic : MonoBehaviour
 {
+    private bool _isPause;
+    public bool IsPause 
+    { 
+        get 
+        { 
+            return _isPause;
+        } 
+        set 
+        {
+            if (value == _isPause) return;
+            if (value) _backGroundPlayingAS.Pause();
+            else _backGroundPlayingAS.Play();
+            _isPause = value;
+        } 
+    }
+
     [SerializeField] private AudioSource[] backGroundMusic;
     private GameObject _backGroundPlaying;
-    private int _numberBackgroundPlaying = 0;
+    private AudioSource _backGroundPlayingAS;
+    private int _numberBackgroundPlaying;
 
     private void Start()
     {
         _numberBackgroundPlaying = Random.Range(0, backGroundMusic.Length);
-        _backGroundPlaying = Instantiate(backGroundMusic[_numberBackgroundPlaying].gameObject, transform);
-        Destroy(_backGroundPlaying, _backGroundPlaying.GetComponent<AudioSource>().clip.length);
+        StartCoroutine(PlayBackGround(_numberBackgroundPlaying));
     }
 
     private void Update()
@@ -23,7 +40,23 @@ public class BackRoundMusic : MonoBehaviour
     {
         _numberBackgroundPlaying++;
         _numberBackgroundPlaying = (int)Mathf.Repeat(_numberBackgroundPlaying, backGroundMusic.Length);
-        _backGroundPlaying = Instantiate(backGroundMusic[_numberBackgroundPlaying].gameObject, transform);
-        Destroy(_backGroundPlaying, _backGroundPlaying.GetComponent<AudioSource>().clip.length);
+        StartCoroutine(PlayBackGround(_numberBackgroundPlaying));
+    }
+
+    private IEnumerator PlayBackGround(int number)
+    {
+        _backGroundPlaying = Instantiate(backGroundMusic[number].gameObject, transform);
+        var timerMusic = 0f;
+        _backGroundPlayingAS = _backGroundPlaying.GetComponent<AudioSource>();
+        while (timerMusic < _backGroundPlayingAS.clip.length)
+        {
+            print(_backGroundPlayingAS.clip.length);
+            print(timerMusic);
+            print(_backGroundPlayingAS.isPlaying);
+            print(_backGroundPlayingAS.isActiveAndEnabled);
+            if (!IsPause) timerMusic += Time.unscaledDeltaTime;
+            yield return null;
+        }
+        Destroy(_backGroundPlaying);
     }
 }

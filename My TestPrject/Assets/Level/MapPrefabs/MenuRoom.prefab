@@ -2984,7 +2984,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3949
+  m_VersionIndex: 3937
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3111,7 +3111,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 26906291484083f408a9bb8c8256ece7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.471
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3404,6 +3404,10 @@ PrefabInstance:
     - target: {fileID: 3936430791885987419, guid: 21bafe4581b9c974681c2f09f18919d1, type: 3}
       propertyPath: lightOffFrequency
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355553994526861370, guid: 21bafe4581b9c974681c2f09f18919d1, type: 3}
+      propertyPath: m_Intensity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8524979037659929488, guid: 21bafe4581b9c974681c2f09f18919d1, type: 3}
       propertyPath: m_Name
