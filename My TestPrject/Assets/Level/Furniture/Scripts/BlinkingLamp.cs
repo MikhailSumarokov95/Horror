@@ -7,23 +7,22 @@ public class BlinkingLamp : MonoBehaviour
     [SerializeField] float numberBlinksPerPhase;
     [SerializeField] float lightOffFrequency;
     [SerializeField] float timeLightOff;
-    [SerializeField] private Light _lightLamp;
+    [SerializeField] private Light lightLamp;
     private float _firstBlink;
-    private float _startIntensity;
     private Coroutine _blinkingLight;
     private Renderer _lightRend;
 
-    private void Start()
+    private void Awake()
     {
         _firstBlink = Random.Range(0, lightOffFrequency);
-        _startIntensity = _lightLamp.intensity;
         _lightRend = GetComponent<Renderer>();
-        _blinkingLight = StartCoroutine(BlinkingLight());
     }
 
-    private void OnDisable()
+    public void SetLight(bool value)
     {
-        StopCoroutine(_blinkingLight);
+        if (value) _blinkingLight = StartCoroutine(BlinkingLight());
+        else if (_blinkingLight != null) StopCoroutine(_blinkingLight);
+        lightLamp.enabled = value;
     }
 
     private IEnumerator BlinkingLight()
@@ -48,7 +47,7 @@ public class BlinkingLamp : MonoBehaviour
 
     private void SetLighting(bool value)
     {
-        _lightLamp.enabled = value;
+        lightLamp.enabled = value;
         if (value)
         {
             _lightRend.material.SetColor("_EmissionColor", Color.white);

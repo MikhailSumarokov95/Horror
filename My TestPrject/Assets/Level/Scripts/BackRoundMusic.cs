@@ -50,10 +50,6 @@ public class BackRoundMusic : MonoBehaviour
         _backGroundPlayingAS = _backGroundPlaying.GetComponent<AudioSource>();
         while (timerMusic < _backGroundPlayingAS.clip.length)
         {
-            print(_backGroundPlayingAS.clip.length);
-            print(timerMusic);
-            print(_backGroundPlayingAS.isPlaying);
-            print(_backGroundPlayingAS.isActiveAndEnabled);
             if (!IsPause) timerMusic += Time.unscaledDeltaTime;
             yield return null;
         }

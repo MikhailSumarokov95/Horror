@@ -74,6 +74,7 @@ namespace ToxicFamilyGames.FirstPersonController
         private void Update()
         {
             if (IsBrokenNeck) StartCoroutine(NeckTwist());
+            if (gameManager.IsPause) return;
             if (isLocked) return;
             CameraUpdate();
             if (!characterController.isGrounded || moveMagnitude != 0)
@@ -87,7 +88,7 @@ namespace ToxicFamilyGames.FirstPersonController
         
         private void CameraUpdate()
         {
-            Vector2 mouse = Mouse * generalSetting.TurningSpeed * Time.deltaTime;
+            Vector2 mouse = Mouse * generalSetting.TurningSpeed;
 
             transform.Rotate(Vector3.up, mouse.x);
 
