@@ -26,6 +26,6 @@ public class GuadeMobile : MonoBehaviour
         }
 
         PlayerPrefs.SetInt("guade", 1);
-        FindObjectOfType<GameManager>().OnWin();
+        FindObjectOfType<GameManager>().StartMenu();
     }
 }

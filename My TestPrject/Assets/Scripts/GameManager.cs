@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameTable;
     [SerializeField] private GameObject menuTable;
     [SerializeField] private GameObject goPauseButton;
-    [SerializeField] private GameObject flashlight;
-    [SerializeField] private GameObject eyes;
     [SerializeField] private GeneralSetting generalSetting;
     [SerializeField] private GameInput gameInput;
     [SerializeField] private KeyCode keyPause;
@@ -26,7 +24,8 @@ public class GameManager : MonoBehaviour
         generalSetting.LoadSettings();
         _levelCreator = FindObjectOfType<LevelsCreator>();
         goPauseButton.SetActive(IsMobile);
-        StartMenu();
+        if (PlayerPrefs.GetInt("guade", 0) == 0) _levelCreator.CreateGuadeLevel();
+        else StartMenu();
     }
 
     private void Update()
@@ -40,9 +39,9 @@ public class GameManager : MonoBehaviour
         _pauseKeyLock = true;
         menuTable.SetActive(true);
         gameTable.SetActive(false);
-        flashlight.SetActive(false);
-        eyes.SetActive(false);
-        OnPausePanel(false);
+        _levelCreator.ReturnMenu();
+        OnPause(false);
+        pauseTable.SetActive(false);
     }
 
     public void StartLevel()
@@ -50,8 +49,6 @@ public class GameManager : MonoBehaviour
         _pauseKeyLock = false;
         menuTable.SetActive(false);
         gameTable.SetActive(true);
-        flashlight.SetActive(true);
-        eyes.SetActive(true);
         OnPause(false);
     }
 
@@ -68,6 +65,7 @@ public class GameManager : MonoBehaviour
         gameTable.SetActive(false);
         winTable.SetActive(true);
         OnPause(true);
+        if (!IsMobile) Cursor.lockState = CursorLockMode.None;
     }
 
     public void OnLoss()
@@ -76,18 +74,19 @@ public class GameManager : MonoBehaviour
         gameTable.SetActive(false);
         lossTable.SetActive(true);
         OnPause(true);
+        if (!IsMobile) Cursor.lockState = CursorLockMode.None;
     }
 
     public void OnPausePanel(bool value)
     {
         pauseTable.SetActive(value);
         OnPause(value);
+        if (!IsMobile) Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
     private void OnPause(bool value)
     {
         IsPause = value;
         Time.timeScale = value ? 0 : 1;
-        if (!IsMobile) Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
     }
 }

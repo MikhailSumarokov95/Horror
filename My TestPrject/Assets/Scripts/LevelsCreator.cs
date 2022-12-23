@@ -9,28 +9,22 @@ public class LevelsCreator : MonoBehaviour
     [SerializeField] private GameObject[] modeForLevelNumberPrefabs;
     [SerializeField] private GameObject[] mapPrefabs;
     [SerializeField] private GameObject menuRoom;
-    [SerializeField] private GameObject GuadeMobile;
+    [SerializeField] private GameObject guadeMobile;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject monster;
-    private GameObject currentLevel;
+    private GameObject _currentLevel;
 
     private void Start()
     {
-        menuRoom.SetActive(true);
         CheckPrefabs();
     }
 
     public void CreateLevel(int number)
     {
-        if (number == 0 && PlayerPrefs.GetInt("guade", 0) == 0)
-        {
-            CreateGuadeLevel();
-            return;
-        }
         menuRoom.SetActive(false);
-        Destroy(currentLevel);
+        Destroy(_currentLevel);
         var numberMap = Random.Range(0, mapPrefabs.Length);
-        currentLevel = Instantiate(mapPrefabs[numberMap], Vector3.zero, Quaternion.identity);
+        _currentLevel = Instantiate(mapPrefabs[numberMap], Vector3.zero, Quaternion.identity);
         player.SetActive(false);
         monster.SetActive(false);
         StartCoroutine(WaitOneFrameAndInitializationLevel(number));
@@ -38,16 +32,27 @@ public class LevelsCreator : MonoBehaviour
 
     public void ReturnMenu()
     {
-        Destroy(currentLevel);
+        if (_currentLevel != null) Destroy(_currentLevel);
         menuRoom.SetActive(true);
         monster.SetActive(false);
         player.SetActive(false);
     }
 
+    public void CreateGuadeLevel()
+    {
+        menuRoom.SetActive(false);
+        _currentLevel = Instantiate(guadeMobile);
+        _currentLevel.GetComponent<NavMeshSurface>().BuildNavMesh();
+        player.SetActive(true);
+        var map = _currentLevel.GetComponent<Map>();
+        player.transform.SetPositionAndRotation(map.PointPlayerSpawn.position, map.PointPlayerSpawn.rotation);
+        monster.transform.SetPositionAndRotation(map.PointMonsterSpawn.position, map.PointMonsterSpawn.rotation);
+    }
+
     private void InitializationLevel(int number)
     {
-        var map = currentLevel.GetComponent<Map>();
-        Instantiate(modeForLevelNumberPrefabs[number], currentLevel.transform);
+        var map = _currentLevel.GetComponent<Map>();
+        Instantiate(modeForLevelNumberPrefabs[number], _currentLevel.transform);
         var level = FindObjectOfType<Level>();
         level.NumberLevel = NumberCurrentLevel = number;
         map.GetComponent<NavMeshSurface>().BuildNavMesh();
@@ -70,18 +75,6 @@ public class LevelsCreator : MonoBehaviour
 
         foreach (var map in mapPrefabs)
             if (map.GetComponent<Map>() == null) Debug.LogError("Map does not contain script \"Map\"");
-    }
-
-    private void CreateGuadeLevel()
-    {
-        menuRoom.SetActive(false);
-        currentLevel = Instantiate(GuadeMobile);
-        currentLevel.GetComponent<NavMeshSurface>().BuildNavMesh();
-        player.SetActive(true);
-        //monster.SetActive(true);
-        var map = currentLevel.GetComponent<Map>();
-        player.transform.SetPositionAndRotation(map.PointPlayerSpawn.position, map.PointPlayerSpawn.rotation);
-        monster.transform.SetPositionAndRotation(map.PointMonsterSpawn.position, map.PointMonsterSpawn.rotation);
     }
 
     [ContextMenu("ClearSaveGuade")]
