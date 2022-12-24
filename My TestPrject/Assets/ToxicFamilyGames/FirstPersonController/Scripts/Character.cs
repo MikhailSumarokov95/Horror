@@ -105,7 +105,7 @@ namespace ToxicFamilyGames.FirstPersonController
             this.moveMagnitude = moveMagnitude;
         }
 
-        private IEnumerator NeckTwist()
+        public IEnumerator NeckTwist()
         {
             IsBrokenNeck = false;
             var monsterPosition = GameObject.FindGameObjectWithTag("Monster").transform;
@@ -117,7 +117,6 @@ namespace ToxicFamilyGames.FirstPersonController
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotationForLookAnMonster, 0.1f);
                 if (Mathf.Abs(transform.rotation.eulerAngles.y - rotationForLookAnMonster.eulerAngles.y) < 1f) break;
                 yield return null;
-
             }
             isLocked = false;
             yield break;

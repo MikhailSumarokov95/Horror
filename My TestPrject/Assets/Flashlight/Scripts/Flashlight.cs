@@ -34,7 +34,7 @@ public class Flashlight : MonoBehaviour
         SetActiveFlashlight(true);
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         isDischargedImage.transform.parent.gameObject.SetActive(false);
         isOnFlashlightButton.transform.parent.gameObject.SetActive(false);

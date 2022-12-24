@@ -41,8 +41,8 @@ public class LevelsCreator : MonoBehaviour
     public void CreateGuadeLevel()
     {
         menuRoom.SetActive(false);
-        _currentLevel = Instantiate(guadeMobile);
-        _currentLevel.GetComponent<NavMeshSurface>().BuildNavMesh();
+        guadeMobile.SetActive(true);
+        _currentLevel = guadeMobile;
         player.SetActive(true);
         var map = _currentLevel.GetComponent<Map>();
         player.transform.SetPositionAndRotation(map.PointPlayerSpawn.position, map.PointPlayerSpawn.rotation);
