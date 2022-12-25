@@ -3,9 +3,12 @@ using UnityEngine;
 public class SettingMultyplatform : MonoBehaviour
 {
     [SerializeField] private GameObject pcSetting;
+    [SerializeField] private GameObject mobileSetting;
 
-    private void Start()
+    private void OnEnable()
     {
-        pcSetting.SetActive(!FindObjectOfType<GameManager>().IsMobile);
+        var isMobile = FindObjectOfType<GameManager>().IsMobile;
+        mobileSetting.SetActive(isMobile);
+        pcSetting.SetActive(!isMobile);
     }
 }

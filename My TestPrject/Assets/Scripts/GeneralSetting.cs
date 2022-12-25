@@ -3,8 +3,12 @@ using UnityEngine.UI;
 
 public class GeneralSetting : MonoBehaviour
 {
-    [SerializeField] private Slider turningSpeedSlider;
-    [SerializeField] private Slider musicVolumeSlider;
+    [SerializeField] private Slider mobileTurningSpeedSlider;
+    [SerializeField] private Slider mobileMusicVolumeSlider;
+    [SerializeField] private Slider pcTurningSpeedSlider;
+    [SerializeField] private Slider pcMobileMusicVolumeSlider;
+    private Slider turningSpeedSlider;
+    private Slider musicVolumeSlider;
 
     private bool isActiveMusic;
     public bool IsActiveMusic { 
@@ -15,7 +19,7 @@ public class GeneralSetting : MonoBehaviour
         set
         {
             isActiveMusic = value;
-            AudioListener.pause = isActiveMusic;
+            AudioListener.pause = !isActiveMusic;
         } 
     }
 
@@ -47,7 +51,7 @@ public class GeneralSetting : MonoBehaviour
             else musicVolume = value;
             AudioListener.volume = musicVolume;
         } 
-    } 
+    }
 
     private void OnDisable()
     {
@@ -62,9 +66,25 @@ public class GeneralSetting : MonoBehaviour
 
     public void LoadSettings()
     {
+        PlatformDefinition();
         MusicVolume = PlayerPrefs.GetFloat("musicVolume", musicVolumeSlider.value);
         TurningSpeed = PlayerPrefs.GetFloat("turningSpeed", turningSpeedSlider.value);
         musicVolumeSlider.value = MusicVolume;
         turningSpeedSlider.value = TurningSpeed;
+    }
+
+    private void PlatformDefinition()
+    {
+        if (FindObjectOfType<GameManager>().IsMobile)
+        {
+            turningSpeedSlider = mobileTurningSpeedSlider;
+            musicVolumeSlider = mobileMusicVolumeSlider;
+        }
+
+        else
+        {
+            turningSpeedSlider = pcTurningSpeedSlider;
+            musicVolumeSlider = pcMobileMusicVolumeSlider;
+        }
     }
 }
