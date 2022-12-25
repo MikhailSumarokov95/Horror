@@ -29,6 +29,7 @@ public class SurvivalMode : Level
     private void Start()
     {
         base.Start();
+        // сделать пустой объект и в него поместить счетчик и иконку
         _timerTMP = GameObject.FindGameObjectWithTag("TimerSurvivalMode").GetComponent<TMP_Text>();
         Timer = timerTimeDependingOnTheLevelNumber[NumberLevel];
         _map.CreateRandomObjectsOnLevel(battery, amountBattery);

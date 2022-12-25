@@ -51,4 +51,4 @@ MonoBehaviour:
   amountBattery: 3
   amountPowerEnginner: 3
   amountCoin: 3
-  timerTimeDependingOnTheLevelNumber: 1e00000028000000320000002c010000
+  timerTimeDependingOnTheLevelNumber: 1e000000280000000a0000000a000000
