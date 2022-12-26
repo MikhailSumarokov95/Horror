@@ -60,6 +60,7 @@ public class Flashlight : MonoBehaviour
 
     public void SetActiveFlashlight(bool value)
     {
+        print("SetActiveFlashlight");
         spotLight.gameObject.SetActive(value);
         isOnFlashlight = value;
         isOnFlashlightButton.gameObject.SetActive(value);

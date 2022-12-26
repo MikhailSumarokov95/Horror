@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9c78537bd31cb48856db028d32c640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedblinking: 0.1
+  speedblinking: 0.08
   numberBlinksPerPhase: 5
   lightOffFrequency: 30
   timeLightOff: 3
@@ -210,7 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afae50ba80ec52740a49be12f777532d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightLamp: {fileID: 6355553994526861370}
 --- !u!136 &2601449877870125418
 CapsuleCollider:
   m_ObjectHideFlags: 0

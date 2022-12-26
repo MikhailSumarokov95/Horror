@@ -24,7 +24,12 @@ public class GameManager : MonoBehaviour
         generalSetting.LoadSettings();
         _levelCreator = FindObjectOfType<LevelsCreator>();
         goPauseButton.SetActive(IsMobile);
-        if (PlayerPrefs.GetInt("guade", 0) == 0) _levelCreator.CreateGuadeLevel();
+        if (PlayerPrefs.GetInt("guade", 0) == 0)
+        {
+            _levelCreator.CreateGuadeLevel();
+            gameTable.SetActive(true);
+        }
+
         else StartMenu();
     }
 
