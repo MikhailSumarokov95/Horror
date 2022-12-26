@@ -6,6 +6,7 @@ using ToxicFamilyGames.FirstPersonController;
 
 public class GuadeMobile : MonoBehaviour
 {
+    public Transform PointSpawnPlayer;
     [SerializeField] private Button goPauseButton;
     [SerializeField] private Flashlight flashlight;
     [SerializeField] private Energy energy;

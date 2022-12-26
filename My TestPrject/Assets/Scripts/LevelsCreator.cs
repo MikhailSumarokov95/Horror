@@ -44,9 +44,8 @@ public class LevelsCreator : MonoBehaviour
         guadeMobile.SetActive(true);
         _currentLevel = guadeMobile;
         player.SetActive(true);
-        var map = _currentLevel.GetComponent<Map>();
-        player.transform.SetPositionAndRotation(map.PointPlayerSpawn.position, map.PointPlayerSpawn.rotation);
-        monster.transform.SetPositionAndRotation(map.PointMonsterSpawn.position, map.PointMonsterSpawn.rotation);
+        var guade = _currentLevel.GetComponent<GuadeMobile>();
+        player.transform.SetPositionAndRotation(guade.PointSpawnPlayer.position, guade.PointSpawnPlayer.rotation);
     }
 
     private void InitializationLevel(int number)
@@ -58,8 +57,10 @@ public class LevelsCreator : MonoBehaviour
         map.GetComponent<NavMeshSurface>().BuildNavMesh();
         player.SetActive(true);
         monster.SetActive(true);
-        player.transform.SetPositionAndRotation(map.PointPlayerSpawn.position, map.PointPlayerSpawn.rotation);
-        monster.transform.SetPositionAndRotation(map.PointMonsterSpawn.position, map.PointMonsterSpawn.rotation);
+        var playerSpawnPoint = map.GetSpawnPoint();
+        var monsterSpawnPoint = map.GetSpawnPoint();
+        player.transform.SetPositionAndRotation(playerSpawnPoint.position, playerSpawnPoint.rotation);
+        monster.transform.SetPositionAndRotation(monsterSpawnPoint.position, monsterSpawnPoint.rotation);
     }
 
     private IEnumerator WaitOneFrameAndInitializationLevel(int number)

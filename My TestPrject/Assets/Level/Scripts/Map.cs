@@ -2,13 +2,8 @@ using UnityEngine;
 
 public class Map : MonoBehaviour
 {
-    public Transform PointPlayerSpawn { get { return pointPlayerSpawn; } }
-
-    public Transform PointMonsterSpawn { get { return pointMonsterSpawn; } }
-
-    [SerializeField] private Transform pointPlayerSpawn;
-    [SerializeField] private Transform pointMonsterSpawn;
     [SerializeField] private Transform[] positionSpawnObject;
+    [SerializeField] private Transform[] pointSpawn;
 
     public void CreateRandomObjectsOnLevel(GameObject obj, int amount)
     {
@@ -27,5 +22,20 @@ public class Map : MonoBehaviour
             Instantiate(obj, positionSpawn + obj.transform.position, obj.transform.rotation)
                 .transform.SetParent(transform);
         }
+    }
+
+    public Transform GetSpawnPoint()
+    {
+        Transform spawnPoint;
+        int numberSpawnPoint;
+        while (true)
+        {
+            numberSpawnPoint = Random.Range(0, pointSpawn.Length);
+            if (pointSpawn[numberSpawnPoint] == null) continue;
+            else spawnPoint = pointSpawn[numberSpawnPoint];
+            break;
+        }
+        Destroy(pointSpawn[numberSpawnPoint].gameObject);
+        return spawnPoint;
     }
 }
