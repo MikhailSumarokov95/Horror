@@ -4,8 +4,13 @@ using UnityEngine.AI;
 public class Monster : MonoBehaviour
 {
     public bool IsGameOver { get { return _level.IsGameOver; } }
+
     public bool SetMove { get; set; }
+
     public bool IsMonsterVisible { get; private set; }
+
+    public float VisibilityDistance { get { return visibilityDistance; } set { visibilityDistance = value; } }
+
     [SerializeField] private float visibilityDistance = 10f;
     [SerializeField] private float distanceSearchPointRandomMove = 4f;
     [SerializeField] private float distanceToPlayerGameOver = 0.5f;
@@ -32,6 +37,7 @@ public class Monster : MonoBehaviour
         if (!IsMonsterVisible || SetMove) Move();
         else _monsterNMA.isStopped = true;
         CheckingMonsterHasCaughtUpWithPlayer();
+        print(_distanceToPlayer);
     }
 
     private void CheckingMonsterHasCaughtUpWithPlayer()

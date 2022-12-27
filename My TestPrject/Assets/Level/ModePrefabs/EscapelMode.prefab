@@ -44,6 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0be66d4b22f5cf42ab45e18f5a2f5a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberTopCalculatedDifficultyLevel: 4
+  VisibilityDistanceMonsterDependingOnTheLevelNumber:
+  - 30
+  - 50
+  - 100
+  - 150
   IsGameOver: 0
   key: {fileID: 3443963215855111274, guid: 5c49ce1707eba6547a4d6933755a9c6b, type: 3}
   numberOfKeysToWinDependingOnTheLevelNumber: 0300000005000000080000000a000000

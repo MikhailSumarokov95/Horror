@@ -44,9 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b06048ec5bf53d54088b3137c035d0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberTopCalculatedDifficultyLevel: 0
+  VisibilityDistanceMonsterDependingOnTheLevelNumber:
+  - 30
+  - 50
+  - 100
+  - 150
   IsGameOver: 0
   battery: {fileID: 3486187060587981701, guid: 7979413014829ea41a76d4a022ea0348, type: 3}
   powerEngineer: {fileID: 148312557185659057, guid: 1064b6b8ea7c8cc449ee634e9245be1a, type: 3}
   amountBattery: 3
   amountPowerEnginner: 3
-  timerTimeDependingOnTheLevelNumber: 1e000000280000000a00000090010000
+  timerTimeDependingOnTheLevelNumber: 64000000c80000002c01000090010000
