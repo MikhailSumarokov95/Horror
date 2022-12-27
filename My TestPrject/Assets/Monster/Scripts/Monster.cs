@@ -31,6 +31,12 @@ public class Monster : MonoBehaviour
         DetermineVisibility();
         if (!IsMonsterVisible || SetMove) Move();
         else _monsterNMA.isStopped = true;
+        CheckingMonsterHasCaughtUpWithPlayer();
+    }
+
+    private void CheckingMonsterHasCaughtUpWithPlayer()
+    {
+        if (_distanceToPlayer < distanceToPlayerGameOver) NeckTwist();
     }
 
     private void Move()
@@ -44,7 +50,6 @@ public class Monster : MonoBehaviour
     private void MoveToPlayer()
     {
         _monsterNMA.destination = Camera.main.gameObject.transform.position;
-        if (_monsterNMA.remainingDistance < distanceToPlayerGameOver) NeckTwist();
     }
 
     private void RandomMove()
