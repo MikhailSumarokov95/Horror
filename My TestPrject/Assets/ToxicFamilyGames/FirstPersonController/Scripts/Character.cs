@@ -16,6 +16,8 @@ namespace ToxicFamilyGames.FirstPersonController
 
         public bool isLocked;
         [SerializeField]
+        private float speed = 1f;
+        [SerializeField]
         private float movementSpeed = 10;
         [SerializeField]
         private float gravity = 9.81f;
@@ -90,11 +92,15 @@ namespace ToxicFamilyGames.FirstPersonController
         {
             Vector2 mouse = Mouse * generalSetting.TurningSpeed;
 
-            transform.Rotate(Vector3.up, mouse.x);
+            //transform.Rotate(Vector3.up, mouse.x);
+            transform.localRotation = Quaternion.Lerp(Quaternion.Euler(transform.localEulerAngles),
+                Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y + mouse.x, transform.localEulerAngles.z), 0.3f * speed);
 
             _moveX += mouse.y;
-            _moveX = Mathf.Clamp(_moveX, maxDownHead, maxUpHead);
-            head.transform.localEulerAngles = new Vector3 (- _moveX, head.transform.localEulerAngles.y, 0);
+            _moveX = Mathf.Clamp(_moveX, maxDownHead, maxUpHead * 3);
+            //head.transform.localEulerAngles = new Vector3 (- _moveX, head.transform.localEulerAngles.y, 0);
+            head.transform.localRotation = Quaternion.Lerp(Quaternion.Euler(head.transform.localEulerAngles), 
+                Quaternion.Euler(-_moveX / 3, head.transform.localEulerAngles.y, 0), 0.3f * speed);
 
             float moveMagnitude = Move.magnitude;
             if ((this.moveMagnitude == 0 && moveMagnitude != 0) ||
