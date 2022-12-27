@@ -9875,7 +9875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26deaaee54961f04ead5ded02a74a7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsMobile: 0
+  IsMobile: 1
   menuRoom: {fileID: 158151759}
   winTable: {fileID: 6666277073959903699}
   lossTable: {fileID: 715380961}

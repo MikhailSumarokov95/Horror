@@ -35,7 +35,7 @@ public class Map : MonoBehaviour
             else spawnPoint = pointSpawn[numberSpawnPoint];
             break;
         }
-        Destroy(pointSpawn[numberSpawnPoint].gameObject);
+        pointSpawn[numberSpawnPoint] = null;
         return spawnPoint;
     }
 }

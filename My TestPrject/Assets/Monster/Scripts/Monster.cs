@@ -37,7 +37,6 @@ public class Monster : MonoBehaviour
         if (!IsMonsterVisible || SetMove) Move();
         else _monsterNMA.isStopped = true;
         CheckingMonsterHasCaughtUpWithPlayer();
-        print(_distanceToPlayer);
     }
 
     private void CheckingMonsterHasCaughtUpWithPlayer()
