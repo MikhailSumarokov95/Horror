@@ -65,6 +65,7 @@ public class Energy : MonoBehaviour
         }
     }
 
+    [ContextMenu("SetFullEnergy")]
     public void SetFullEnergy()
     {
         Value = 1;

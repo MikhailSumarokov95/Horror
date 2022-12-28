@@ -15,8 +15,8 @@ namespace ToxicFamilyGames.FirstPersonController
         public bool IsBrokenNeck { get; set; }
 
         public bool isLocked;
-        [SerializeField]
-        private float speed = 1f;
+        //[SerializeField]
+        //private float speed = 1f;
         [SerializeField]
         private float movementSpeed = 10;
         [SerializeField]
@@ -92,15 +92,10 @@ namespace ToxicFamilyGames.FirstPersonController
         {
             Vector2 mouse = Mouse * generalSetting.TurningSpeed;
 
-            //transform.Rotate(Vector3.up, mouse.x);
-            transform.localRotation = Quaternion.Lerp(Quaternion.Euler(transform.localEulerAngles),
-                Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y + mouse.x, transform.localEulerAngles.z), 0.3f * speed);
-
             _moveX += mouse.y;
-            _moveX = Mathf.Clamp(_moveX, maxDownHead, maxUpHead * 3);
-            //head.transform.localEulerAngles = new Vector3 (- _moveX, head.transform.localEulerAngles.y, 0);
-            head.transform.localRotation = Quaternion.Lerp(Quaternion.Euler(head.transform.localEulerAngles), 
-                Quaternion.Euler(-_moveX / 3, head.transform.localEulerAngles.y, 0), 0.3f * speed);
+            _moveX = Mathf.Clamp(_moveX, maxDownHead * 3, maxUpHead * 3);
+            head.transform.localEulerAngles = new Vector3(-_moveX / 3, head.transform.localEulerAngles.y, 0);
+            transform.Rotate(Vector3.up, mouse.x);
 
             float moveMagnitude = Move.magnitude;
             if ((this.moveMagnitude == 0 && moveMagnitude != 0) ||

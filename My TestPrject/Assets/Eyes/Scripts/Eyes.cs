@@ -11,8 +11,8 @@ public class Eyes : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     public float length = 1;
     public float delay = 0.5f;
-    private Animator animator;
-
+    private Animator _animator;
+    private Coroutine _coroutineBlink;
 
     private bool isForce = false;
     public bool IsForce {
@@ -20,9 +20,10 @@ public class Eyes : MonoBehaviour
         set {
             if (value) See(!value);
             isForce = value;
-            animator.SetBool("IsForceOpen", isForce);
+            _animator.SetBool("IsForceOpen", isForce);
             isOpenButton.gameObject.SetActive(value);
             isCloseButton.gameObject.SetActive(!value);
+            if (true && _coroutineBlink != null) StopCoroutine(_coroutineBlink);
         } 
     }
 
@@ -30,12 +31,17 @@ public class Eyes : MonoBehaviour
     public bool IsOpen { get; set; } = true;
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
     }
 
     private void Start()
     {
         isOpenButton.transform.parent.gameObject.SetActive(FindObjectOfType<GameManager>().IsMobile);
+    }
+
+    private void OnEnable()
+    {
+        IsForce = false;
     }
 
     private float time = 0;
@@ -54,18 +60,18 @@ public class Eyes : MonoBehaviour
         if (time >= delay)
         {
             time = 0;
-            StartCoroutine(Blink());
+            _coroutineBlink = StartCoroutine(Blink());
         }
     }
 
     private IEnumerator Blink()
     {
-        animator.SetBool("IsOpen", IsOpen = false);
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
+        _animator.SetBool("IsOpen", IsOpen = false);
+        yield return new WaitForSeconds(_animator.GetCurrentAnimatorClipInfo(0).Length);
         See(true);
         yield return new WaitForSeconds(length);
         See(false);
-        animator.SetBool("IsOpen", IsOpen = true);
+        _animator.SetBool("IsOpen", IsOpen = true);
     }
 
     private void See(bool value)
