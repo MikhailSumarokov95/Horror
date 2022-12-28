@@ -9,10 +9,10 @@ TagManager:
   - TimerSurvivalMode
   - Coin
   - Key
-  - NumberFoundKeysText
   - Monster
   - Reward
   - Ads
+  - NumberFoundKeys
   layers:
   - Default
   - TransparentFX

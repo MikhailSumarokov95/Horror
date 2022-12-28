@@ -12,7 +12,7 @@ public class SurvivalMode : Level
         private set 
         {
             _timer = value;
-            _timerTMP.text = _timer.ToString("F0"); 
+            _timerText.text = _timer.ToString("F0"); 
         } 
     }
 
@@ -22,13 +22,16 @@ public class SurvivalMode : Level
     [SerializeField] private int amountPowerEnginner = 3;
     [SerializeField] private int[] timerTimeDependingOnTheLevelNumber;
     private float _timer;
-    private TMP_Text _timerTMP;
+    private TMP_Text _timerText;
+    private GameObject _timerGO;
 
     private void Start()
     {
         base.Start();
-        // сделать пустой объект и в него поместить счетчик и иконку
-        _timerTMP = GameObject.FindGameObjectWithTag("TimerSurvivalMode").GetComponent<TMP_Text>();
+        _timerGO = GameObject.FindGameObjectWithTag("TimerSurvivalMode");
+        SetActivateChildTransform(_timerGO.transform, true);
+        _timerText = _timerGO.transform.GetChild(0).GetComponent<TMP_Text>();
+        _timerText.text = "0";
         Timer = timerTimeDependingOnTheLevelNumber[NumberLevel];
         _map.CreateRandomObjectsOnLevel(battery, amountBattery);
         _map.CreateRandomObjectsOnLevel(powerEngineer, amountPowerEnginner);
@@ -36,7 +39,7 @@ public class SurvivalMode : Level
 
     private void OnDestroy()
     {
-        _timerTMP.text = "";
+        SetActivateChildTransform(_timerGO.transform, false);
     }
 
     private void Update()

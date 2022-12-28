@@ -6,24 +6,22 @@ public class EscapeMode : Level
     [SerializeField] private GameObject key;
     [SerializeField] private int[] numberOfKeysToWinDependingOnTheLevelNumber;
     private int _numberFoundKeys;
+    private GameObject _numberFoundKeysGO;
     private TMP_Text _numberFoundKeysText;
-
-    private void Awake()
-    {
-        // сделать пустой объект и в него поместить счетчик и иконку, а лучше GUI
-        _numberFoundKeysText = GameObject.FindGameObjectWithTag("NumberFoundKeysText").GetComponent<TMP_Text>();
-    }
 
     private void Start()
     {
         base.Start();
+        _numberFoundKeysGO = GameObject.FindGameObjectWithTag("NumberFoundKeys");
+        SetActivateChildTransform(_numberFoundKeysGO.transform, true);
+        _numberFoundKeysText = _numberFoundKeysGO.transform.GetChild(0).GetComponent<TMP_Text>();
         _numberFoundKeysText.text = "0";
         _map.CreateRandomObjectsOnLevel(key, numberOfKeysToWinDependingOnTheLevelNumber[_difficultyLevelNumber]);
     }
 
     private void OnDestroy()
     {
-        _numberFoundKeysText.text = "";
+        SetActivateChildTransform(_numberFoundKeysGO.transform, false);
     }
 
     [ContextMenu("PickUpKey")]

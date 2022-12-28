@@ -40,4 +40,10 @@ public class Level : MonoBehaviour
         FindObjectOfType<Monster>().VisibilityDistance = 
             VisibilityDistanceMonsterDependingOnTheLevelNumber[NumberLevel - numberTopCalculatedDifficultyLevel];
     }
+
+    protected void SetActivateChildTransform(Transform transform, bool value)
+    {
+        for (var i = 0; i < transform.childCount; i++)
+            transform.GetChild(i).gameObject.SetActive(value);
+    }
 }

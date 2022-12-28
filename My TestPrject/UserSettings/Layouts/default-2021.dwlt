@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Simulator
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 21
+  controlID: 23
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 149
+  controlID: 118
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 22
+  controlID: 24
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -601,15 +601,15 @@ MonoBehaviour:
       layout: 4
   m_WindowGUID: 2a3a5d1f1aa17ae4e87870834ebe1402
   m_Gizmos: 1
-  m_OverrideSceneCullingMask: 6917529027641081856
+  m_OverrideSceneCullingMask: 0
   m_SceneIsLit: 0
   m_SceneLighting: 1
-  m_2DMode: 0
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 31.28787, y: -33.994904, z: 37.58674}
+    m_Target: {x: 31.68976, y: -38.777588, z: 43.37018}
     speed: 2
     m_Value: {x: 31.28787, y: -33.994904, z: 37.58674}
   m_RenderMode: 0
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_SceneViewState:
     m_AlwaysRefresh: 0
     showFog: 1
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 0
     showImageEffects: 1
     showParticleSystems: 1
@@ -658,15 +658,15 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.5719613, y: 0.2818745, z: -0.21823147, w: 0.73877954}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0.5719575, y: 0.28187266, z: -0.21823004, w: 0.7387747}
+    m_Value: {x: -0.5719613, y: -0.2818745, z: 0.21823147, w: -0.73877954}
   m_Size:
-    m_Target: 74.46137
+    m_Target: 10
     speed: 2
     m_Value: 74.46137
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
     m_Value: 0
   m_CameraSettings:
@@ -748,9 +748,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: e8230000
       m_LastClickedID: 0
-      m_ExpandedIDs: ba6ffcff0e70fcffbe72fcff187efcff6c7efcffd07ffcff5e81fcffb881fcff9884fcffccb1fcff22b2fcff02b5fcffa2fffcfff8fffcffdc02fdffa416fdfff816fdff6618fdffb419fdff0a1afdffea1cfdff68cffdffc2cffdffa2d2fdffa600fefffe00feff6802fefffc03feff5604feff3607feff3851ffff8c51fffff652ffff0454ffff4654ffff2657ffffb061ffffca77ffff9088ffff3293ffff689cffff44faffff4afaffff30fbffffe461000076030100be0501005c0701005e070100540a010076ec01009eec0100beee010054f30100d40c0200fc0c02001c0f0200bc100200b2130200126202005a640200f8650200fa650200
+      m_ExpandedIDs: e0f8ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -815,22 +815,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/ToxicFamilyGames
+    - Assets/Level/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 61
   m_LastFolders:
-  - Assets/ToxicFamilyGames/AdsAndroid
+  - Assets/Level/Scripts
   m_LastFoldersGridSize: 61
   m_LastProjectPath: C:\Users\ykpon\Desktop\Unity\Horror\My TestPrject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 80770000
-    m_LastClickedID: 30592
-    m_ExpandedIDs: 00000000127700001477000016770000187700001a7700001c7700001e7700002277000024770000267700002c770000747700008877000004ea00007cc1020082260300163903001839030020390300
+    m_SelectedIDs: be740000
+    m_LastClickedID: 29886
+    m_ExpandedIDs: 0000000050740000527400005474000056740000587400005a7400005c7400005e74000060740000627400006474000066740000687400006a7400006c7400006e74000070740000727400007474000086740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -858,7 +858,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000127700001477000016770000187700001a7700001c7700001e77000020770000227700002477000026770000287700002a7700002c770000
+    m_ExpandedIDs: 0000000050740000527400005474000056740000587400005a7400005c7400005e74000060740000627400006474000066740000687400006a7400006c7400006e740000707400007274000074740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000005f000090070000c8c800009a7600005a7200009e790000c879000000000000d0ac0200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
