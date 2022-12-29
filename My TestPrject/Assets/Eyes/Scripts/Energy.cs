@@ -71,6 +71,8 @@ public class Energy : MonoBehaviour
         Value = 1;
         eyes.CanControl = true;
         eyes.length = 1;
-        eyes.IsOpen = true;
+        eyes.Open();
+        //eyes.IsOpen = true;
+        //eyes.IsForce = false;
     }
 }

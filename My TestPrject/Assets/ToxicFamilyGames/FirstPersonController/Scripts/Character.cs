@@ -15,8 +15,6 @@ namespace ToxicFamilyGames.FirstPersonController
         public bool IsBrokenNeck { get; set; }
 
         public bool isLocked;
-        //[SerializeField]
-        //private float speed = 1f;
         [SerializeField]
         private float movementSpeed = 10;
         [SerializeField]

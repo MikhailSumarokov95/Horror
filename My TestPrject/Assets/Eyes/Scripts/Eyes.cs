@@ -18,12 +18,13 @@ public class Eyes : MonoBehaviour
     public bool IsForce {
         get { return isForce; }
         set {
-            if (value) See(!value);
+            if (value) See(value);
             isForce = value;
             _animator.SetBool("IsForceOpen", isForce);
             isOpenButton.gameObject.SetActive(value);
             isCloseButton.gameObject.SetActive(!value);
-            if (true && _coroutineBlink != null) StopCoroutine(_coroutineBlink);
+            if (value && _coroutineBlink != null) StopCoroutine(_coroutineBlink);
+            else _coroutineBlink = StartCoroutine(Blink());
         } 
     }
 
@@ -64,20 +65,28 @@ public class Eyes : MonoBehaviour
         }
     }
 
+    public void Open()
+    {
+        if (_coroutineBlink != null) StopCoroutine(_coroutineBlink);
+        See(true);
+        _animator.SetBool("IsOpen", IsOpen = true);
+    }
+
     private IEnumerator Blink()
     {
         _animator.SetBool("IsOpen", IsOpen = false);
         yield return new WaitForSeconds(_animator.GetCurrentAnimatorClipInfo(0).Length);
-        See(true);
-        yield return new WaitForSeconds(length);
         See(false);
+        yield return new WaitForSeconds(length);
+        See(true);
         _animator.SetBool("IsOpen", IsOpen = true);
     }
 
     private void See(bool value)
     {
         if (isForce) return;
+        print("monsterSetMove " + value);
         Monster[] monsters = FindObjectsOfType<Monster>();
-        foreach (Monster monster in monsters) monster.SetMove = value;
+        foreach (Monster monster in monsters) monster.SetMove = !value;
     }
 }
