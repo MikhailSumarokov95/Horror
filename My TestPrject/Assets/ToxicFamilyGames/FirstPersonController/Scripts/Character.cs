@@ -107,12 +107,12 @@ namespace ToxicFamilyGames.FirstPersonController
         public IEnumerator NeckTwist()
         {
             IsBrokenNeck = false;
-            var monsterPosition = GameObject.FindGameObjectWithTag("Monster").transform;
+            var monsterTr = GameObject.FindGameObjectWithTag("Monster").transform;
             Quaternion rotationForLookAnMonster;
             isLocked = true;
             while (true)
             {
-                rotationForLookAnMonster = Quaternion.LookRotation(- monsterPosition.forward);
+                rotationForLookAnMonster = Quaternion.LookRotation(- monsterTr.forward + monsterTr.up * 0.3f);
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotationForLookAnMonster, 0.1f);
                 if (Mathf.Abs(transform.rotation.eulerAngles.y - rotationForLookAnMonster.eulerAngles.y) < 1f) break;
                 yield return null;
