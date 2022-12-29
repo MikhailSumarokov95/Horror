@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<texts>
+	<text id="survivalModeText">Modo de supervivencia</text>
+	<text id="batteriesFindText">¡Encuentra las baterías!</text>
+	<text id="batteriesText">las pilas se están agotando</text>
+	<text id="defaultSettingText">Configuración predeterminada</text>
+	<text id="energyLevelLookForEnergyText">busca una bebida energética</text>
+	<text id="energyLevelText">mira tu nivel de energía, cuando mantienes los ojos abiertos te cansas aún más rápido</text>
+	<text id="escapeModeText">modo de escape</text>
+	<text id="flashlightButtonText">que oscuro... ¡enciende la linterna!</text>
+	<text id="forEyesButtonText">ups... parece que quieres dormir, presiona para mantener los ojos abiertos</text>
+	<text id="headerSurvivalMode">modo de supervivencia</text>
+	<text id="headerSetting">Configuración</text>
+	<text id="headerEscapeMode">modo de escape</text>
+	<text id="headerPause">Pausa</text>
+	<text id="headerGameOver">juego terminado</text>
+	<text id="musicVolumeText">Volumen de música</text>
+	<text id="OnFlashlightText">Activar/desactivar linterna</text>
+	<text id="OpenEyesText">ojos abiertos</text>
+	<text id="PickuUpText">Aumentar</text>
+	<text id="mediumText">Medio</text>
+	<text id="easyText">Fácil</text>
+	<text id="menuText">menú</text>
+	<text id="restartText">reiniciar</text>
+	<text id="turningSpeed">Velocidad de giro</text>
+	<text id="hardText">duro</text>
+	<text id="unrealText">irreal</text>
+	<text id="MusicVolumeText">Volumen de música</text>
+	<text id="headerWinGame">ganar</text>
+	<text id="returnText">atrás</text>
+</texts>

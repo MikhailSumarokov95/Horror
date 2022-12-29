@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<text>
+	<text id="survivalModeText">Hayatta Kalma Modu</text>
+	<text id="batteriesFindText">Pilleri bulun!</text>
+	<text id="batteriesText">piller azalıyor</text>
+	<text id="defaultSettingText">Varsayılan Ayarlar</text>
+	<text id="energyLevelLookForEnergyText">bir enerji içeceği arayın</text>
+	<text id="energyLevelText">enerji seviyenize bakın, gözlerinizi açık tuttuğunuzda daha çabuk yorulursunuz</text>
+	<text id="escapeModeText">kaçış modu</text>
+	<text id="flashlightButtonText">ne kadar karanlık... el fenerini aç!</text>
+	<text id="forEyesButtonText">ayy... uyumak istiyor gibisin, gözlerini açık tutmak için bas</text>
+	<text id="headerSurvivalMode">hayatta kalma modu</text>
+	<text id="headerSetting">Ayarlar</text>
+	<text id="headerEscapeMode">kaçış modu</text>
+	<text id="headerPause">Duraklat</text>
+	<text id="headerGameOver">oyun bitti</text>
+	<text id="musicVolumeText">Müzik Ses Düzeyi</text>
+	<text id="OnFlashlightText">El fenerini aç/kapat</text>
+	<text id="OpenEyesText">gözlerinizi açın</text>
+	<text id="PickuUpText">Yükselt</text>
+	<text id="mediumText">Orta</text>
+	<text id="easyText">Kolay</text>
+	<text id="menuText">menü</text>
+	<text id="restartText">yeniden başlat</text>
+	<text id="turningSpeed">Dönüş hızı</text>
+	<text id="hardText">zor</text>
+	<text id="unrealText">gerçek dışı</text>
+	<text id="MusicVolumeText">Müzik Ses Düzeyi</text>
+	<text id="headerWinGame">kazan</text>
+	<text id="returnText">geri</text>
+</text>

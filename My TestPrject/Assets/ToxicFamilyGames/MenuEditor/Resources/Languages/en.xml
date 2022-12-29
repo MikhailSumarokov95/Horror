@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<text>
+	<text id="survivalModeText">Survival Mode</text>
+	<text id="batteriesFindText">Find the batteries!</text>
+	<text id="batteriesText">batteries are running low</text>
+	<text id="defaultSettingText">Default Settings</text>
+	<text id="energyLevelLookForEnergyText">look for an energy drink</text>
+	<text id="energyLevelText">look at your energy level, when you keep your eyes open you get tired even faster</text>
+	<text id="escapeModeText">escape mode</text>
+	<text id="flashlightButtonText">how dark... turn on the flashlight!</text>
+	<text id="forEyesButtonText">oops.... looks like you want to sleep, press to keep your eyes open</text>
+	<text id="headerSurvivalMode">survival mode</text>
+	<text id="headerSetting">Settings</text>
+	<text id="headerEscapeMode">escape mode</text>
+	<text id="headerPause">Pause</text>
+	<text id="headerGameOver">game over</text>
+	<text id="musicVolumeText">Music Volume</text>
+	<text id="OnFlashlightText">Turn flashlight on/off</text>
+	<text id="OpenEyesText">open eyes</text>
+	<text id="PickuUpText">PickuUp</text>
+	<text id="mediumText">Medium</text>
+	<text id="easyText">Easy</text>
+	<text id="menuText">menu</text>
+	<text id="restartText">restart</text>
+	<text id="turningSpeed">Turning speed</text>
+	<text id="hardText">hard</text>
+	<text id="unrealText">unreal</text>
+	<text id="MusicVolumeText">Music Volume</text>
+	<text id="headerWinGame">win</text>
+	<text id="returnText">back</text>
+</text>

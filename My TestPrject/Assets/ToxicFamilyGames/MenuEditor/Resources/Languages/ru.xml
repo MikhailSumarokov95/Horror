@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<texts>
+  <text id="survivalModeText">Режим «Выживание»</text>
+  <text id="batteriesFindText">ищи батарейки!</text>
+  <text id="batteriesText">батарейки разряжаются</text>
+  <text id="defaultSettingText">Стандартные настройки</text>
+  <text id="energyLevelLookForEnergyText">скорее ищи энергетик</text>
+  <text id="energyLevelText">посмотри на уровень энергии, когда держишь глаза открытыми устаешь еще быстрее</text>
+  <text id="escapeModeText">режим «побег»</text>
+  <text id="flashlightButtonText">какая темнота... включи фонарик!</text>
+  <text id="forEyesButtonText">ой.... кажется, ты хочешь спать, нажми, чтобы держать глаза открытыми</text>
+  <text id="headerSurvivalMode">режим «выживание»</text>
+  <text id="headerSetting">Настройки</text>
+  <text id="headerEscapeMode">режим «побег»</text>
+  <text id="headerPause">Пауза</text>
+  <text id="headerGameOver">конец игры</text>
+  <text id="musicVolumeText">Громкость музыки</text>
+  <text id="OnFlashlightText">Вкл/Выкл фонарик</text>
+  <text id="OpenEyesText">открыть глаза</text>
+  <text id="PickuUpText">Поднять</text>
+  <text id="mediumText">Средний</text>
+  <text id="easyText">Легкий</text>
+  <text id="menuText">меню</text>
+  <text id="restartText">рестарт</text>
+  <text id="turningSpeed">Скорость поворота</text>
+  <text id="hardText">тяжелый</text>
+  <text id="unrealText">нереальный</text>
+  <text id="MusicVolumeText">Громкость музыки</text>
+  <text id="headerWinGame">победа</text>
+  <text id="returnText">назад</text>
+</texts>
