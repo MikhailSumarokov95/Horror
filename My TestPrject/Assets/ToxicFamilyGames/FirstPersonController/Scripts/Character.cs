@@ -99,7 +99,7 @@ namespace ToxicFamilyGames.FirstPersonController
             if ((this.moveMagnitude == 0 && moveMagnitude != 0) ||
                 (this.moveMagnitude != 0 && moveMagnitude == 0))
             {
-                animator.SetBool("isWalking", this.moveMagnitude == 0);
+                //animator.SetBool("isWalking", this.moveMagnitude == 0);
             }
             this.moveMagnitude = moveMagnitude;
         }

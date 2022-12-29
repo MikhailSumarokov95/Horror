@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         gameInput.Awake();
         generalSetting.LoadSettings();
         _levelCreator = FindObjectOfType<LevelsCreator>();

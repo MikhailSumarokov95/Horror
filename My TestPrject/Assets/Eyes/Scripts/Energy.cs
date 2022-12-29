@@ -22,7 +22,6 @@ public class Energy : MonoBehaviour
             {
                 this.value = 0;
                 onZeroEnergy.Invoke();
-                eyes.length = float.PositiveInfinity;
                 eyes.IsForce = false;
                 eyes.CanControl = false;
             }
@@ -70,9 +69,5 @@ public class Energy : MonoBehaviour
     {
         Value = 1;
         eyes.CanControl = true;
-        eyes.length = 1;
-        eyes.Open();
-        //eyes.IsOpen = true;
-        //eyes.IsForce = false;
     }
 }

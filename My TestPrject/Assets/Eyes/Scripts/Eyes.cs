@@ -18,6 +18,7 @@ public class Eyes : MonoBehaviour
     public bool IsForce {
         get { return isForce; }
         set {
+            if (!CanControl) return;
             if (value) See(value);
             isForce = value;
             _animator.SetBool("IsForceOpen", isForce);
@@ -48,7 +49,7 @@ public class Eyes : MonoBehaviour
     private float time = 0;
     private void Update()
     {
-        if (!gameManager.IsMobile && CanControl)
+        if (!gameManager.IsMobile)
         {
             if (GameInput.Key.GetKeyDown("OpenEyes"))
                 IsForce = true;
@@ -85,7 +86,6 @@ public class Eyes : MonoBehaviour
     private void See(bool value)
     {
         if (isForce) return;
-        print("monsterSetMove " + value);
         Monster[] monsters = FindObjectsOfType<Monster>();
         foreach (Monster monster in monsters) monster.SetMove = !value;
     }
