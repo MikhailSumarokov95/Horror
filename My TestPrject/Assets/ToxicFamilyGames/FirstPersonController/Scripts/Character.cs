@@ -88,11 +88,11 @@ namespace ToxicFamilyGames.FirstPersonController
         
         private void CameraUpdate()
         {
-            Vector2 mouse = Mouse * generalSetting.TurningSpeed;
+            Vector2 mouse = Mouse * generalSetting.TurningSpeed * Time.deltaTime;
 
             _moveX += mouse.y;
-            _moveX = Mathf.Clamp(_moveX, maxDownHead * 3, maxUpHead * 3);
-            head.transform.localEulerAngles = new Vector3(-_moveX / 3, head.transform.localEulerAngles.y, 0);
+            _moveX = Mathf.Clamp(_moveX, maxDownHead * 2, maxUpHead * 2);
+            head.transform.localEulerAngles = new Vector3(-_moveX / 2, head.transform.localEulerAngles.y, 0);
             transform.Rotate(Vector3.up, mouse.x);
 
             float moveMagnitude = Move.magnitude;
