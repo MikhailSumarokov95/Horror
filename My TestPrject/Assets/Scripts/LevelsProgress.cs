@@ -5,10 +5,12 @@ using UnityEngine.UI;
 public class LevelsProgress : MonoBehaviour
 {
     [SerializeField] private Level[] level;
+    [SerializeField] private int[] levelsOpenAtBeginningOfGame;
 
     private void Awake()
     {
-        PlayerPrefs.SetInt(level[0].NameLevels, 1);
+        foreach (var numberLevel in levelsOpenAtBeginningOfGame)
+            PlayerPrefs.SetInt(level[numberLevel].NameLevels, 1);
     }
 
     private void Start()

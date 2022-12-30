@@ -85,7 +85,6 @@ namespace ToxicFamilyGames.FirstPersonController
             }
         }
 
-        
         private void CameraUpdate()
         {
             Vector2 mouse = Mouse * generalSetting.TurningSpeed * Time.deltaTime;
@@ -99,7 +98,7 @@ namespace ToxicFamilyGames.FirstPersonController
             if ((this.moveMagnitude == 0 && moveMagnitude != 0) ||
                 (this.moveMagnitude != 0 && moveMagnitude == 0))
             {
-                //animator.SetBool("isWalking", this.moveMagnitude == 0);
+                animator.SetBool("isWalking", this.moveMagnitude == 0);
             }
             this.moveMagnitude = moveMagnitude;
         }

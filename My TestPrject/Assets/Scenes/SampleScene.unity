@@ -2847,7 +2847,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25892
+  m_Name: pb_Mesh55964
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21531,7 +21531,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54.2
+  m_fontSize: 44.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -24063,6 +24063,7 @@ MonoBehaviour:
   - NameLevels: EscapeModeUnreal
     Opened: {fileID: 1184246475}
     Closed: {fileID: 222542936}
+  levelsOpenAtBeginningOfGame: 0000000004000000
 --- !u!222 &6058134015086264692
 CanvasRenderer:
   m_ObjectHideFlags: 0
