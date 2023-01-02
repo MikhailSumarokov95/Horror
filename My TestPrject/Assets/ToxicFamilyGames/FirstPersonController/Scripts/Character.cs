@@ -18,8 +18,6 @@ namespace ToxicFamilyGames.FirstPersonController
         [SerializeField]
         private float movementSpeed = 10;
         [SerializeField]
-        private float gravity = 9.81f;
-        [SerializeField]
         private float maxUpHead = 30; 
         [SerializeField]
         private float maxDownHead = - 15;
@@ -48,7 +46,12 @@ namespace ToxicFamilyGames.FirstPersonController
                 joystick.gameObject.SetActive(false);
             }
             else touchSystem.OnDragForMove += MoveHead;
-        }        
+        }
+
+        private void OnEnable()
+        {
+            isLocked = false;
+        }
 
         private void Update()
         {
