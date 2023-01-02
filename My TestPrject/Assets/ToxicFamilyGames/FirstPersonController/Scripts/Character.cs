@@ -6,11 +6,11 @@ namespace ToxicFamilyGames.FirstPersonController
     [RequireComponent(typeof(CharacterController))]
     public class Character : MonoBehaviour
     {
-        public float MoveCharacterHorizontal { get { return gameManager.IsMobile ? joystick.Horizontal : Input.GetAxis("Horizontal"); } }
+        public float MoveHorizontal { get { return gameManager.IsMobile ? joystick.Horizontal : Input.GetAxis("Horizontal"); } }
 
-        public float MoveCharacterVertical { get { return gameManager.IsMobile ? joystick.Vertical : Input.GetAxis("Vertical"); } }
+        public float MoveVertical { get { return gameManager.IsMobile ? joystick.Vertical : Input.GetAxis("Vertical"); } }
 
-        public Vector2 MoveHead { get { return gameManager.IsMobile ? touchSystem.Delta : new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")); } }
+        public Vector3 Move { get { return new Vector3(MoveHorizontal, 0, MoveVertical); } }
 
         public bool IsBrokenNeck { get; set; }
 
@@ -34,9 +34,9 @@ namespace ToxicFamilyGames.FirstPersonController
         [SerializeField]
         private GameObject head;
         private Animator animator;
-        private float _moveX = 0;
         private CharacterController characterController;
-
+        private float moveMagnitude = 0;
+        private float moveHeadX;
 
         private void Start()
         {
@@ -47,29 +47,8 @@ namespace ToxicFamilyGames.FirstPersonController
                 Cursor.lockState = CursorLockMode.Locked;
                 joystick.gameObject.SetActive(false);
             }
-        }
-
-        public Vector2 Mouse
-        {
-            get
-            {
-                if (isLocked) return Vector2.zero;
-                return MoveHead;
-            }
-        }
-
-        public Vector3 Move
-        {
-            get
-            {
-                if (isLocked) return Vector2.zero;
-                Vector3 result = new Vector3(MoveCharacterHorizontal, 0, MoveCharacterVertical);
-                return result;
-            }
-        }
-
-        private float moveMagnitude = 0;
-        private Vector3 characterVelocity = Vector3.zero;
+            else touchSystem.OnDragForMove += MoveHead;
+        }        
 
         private void Update()
         {
@@ -77,23 +56,13 @@ namespace ToxicFamilyGames.FirstPersonController
             if (gameManager.IsPause) return;
             if (isLocked) return;
             CameraUpdate();
-            if (!characterController.isGrounded || moveMagnitude != 0)
-            {
-                characterVelocity.y -= gravity * Time.deltaTime;
-                characterController.Move((transform.rotation * Move * movementSpeed + characterVelocity) * Time.deltaTime);
-                if (characterController.isGrounded) characterVelocity.y = 0;
-            }
+            characterController.SimpleMove(transform.rotation * Move * movementSpeed);
+            if (!gameManager.IsMobile) 
+                MoveHead(new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * Time.deltaTime);
         }
 
         private void CameraUpdate()
         {
-            Vector2 mouse = Mouse * generalSetting.TurningSpeed * Time.deltaTime;
-
-            _moveX += mouse.y;
-            _moveX = Mathf.Clamp(_moveX, maxDownHead * 2, maxUpHead * 2);
-            head.transform.localEulerAngles = new Vector3(-_moveX / 2, head.transform.localEulerAngles.y, 0);
-            transform.Rotate(Vector3.up, mouse.x);
-
             float moveMagnitude = Move.magnitude;
             if ((this.moveMagnitude == 0 && moveMagnitude != 0) ||
                 (this.moveMagnitude != 0 && moveMagnitude == 0))
@@ -101,6 +70,17 @@ namespace ToxicFamilyGames.FirstPersonController
                 animator.SetBool("isWalking", this.moveMagnitude == 0);
             }
             this.moveMagnitude = moveMagnitude;
+        }
+
+        public void MoveHead(Vector2 mouse)
+        {
+            var directionMove = mouse * generalSetting.TurningSpeed;
+
+            moveHeadX += directionMove.y;
+            moveHeadX = Mathf.Clamp(moveHeadX, maxDownHead, maxUpHead);
+            head.transform.localEulerAngles = new Vector3(-moveHeadX, head.transform.localEulerAngles.y, 0);
+
+            transform.Rotate(Vector3.up, directionMove.x);
         }
 
         public IEnumerator NeckTwist()

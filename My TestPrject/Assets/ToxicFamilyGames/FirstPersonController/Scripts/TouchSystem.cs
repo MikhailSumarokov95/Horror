@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine.EventSystems;
 using UnityEngine;
 
@@ -7,30 +6,24 @@ namespace ToxicFamilyGames
 {
     namespace FirstPersonController
     {
-        public class TouchSystem : MonoBehaviour, IDragHandler, IBeginDragHandler
+        public class TouchSystem : MonoBehaviour, IDragHandler, IPointerDownHandler
         {
+            public Action<Vector2> OnDragForMove; 
             private Vector2 delta = Vector2.zero;
-            public Vector2 Delta
-            {
-                get
-                {
-                    Vector2 copy = delta.normalized;
-                    delta = Vector2.zero;
-                    return copy;
-                }
-            }
 
             private Vector2 startPosition = Vector2.zero;
 
-            public void OnBeginDrag(PointerEventData eventData)
+            public void OnPointerDown(PointerEventData eventData)
             {
                 startPosition = eventData.position;
+                OnDrag(eventData);
             }
 
             public void OnDrag(PointerEventData eventData)
             {
                 delta = (eventData.position - startPosition);
                 startPosition = eventData.position;
+                OnDragForMove?.Invoke(delta);
             }
         }
     }
