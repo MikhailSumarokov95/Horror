@@ -9094,7 +9094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26deaaee54961f04ead5ded02a74a7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsMobile: 1
+  IsMobile: 0
   menuRoom: {fileID: 158151759}
   winTable: {fileID: 6666277073959903699}
   lossTable: {fileID: 715380961}
@@ -15695,7 +15695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1041771245906083023, guid: 2b58c60f225eed8469439eb28ec4a9a0, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1041771245906083023, guid: 2b58c60f225eed8469439eb28ec4a9a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23170,7 +23170,7 @@ RectTransform:
   - {fileID: 715380962}
   - {fileID: 336554820}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23490,7 +23490,7 @@ PrefabInstance:
       objectReference: {fileID: 1199444281}
     - target: {fileID: 8118216532810916121, guid: e671f6df5ee10db47b68576c180a6f24, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8118216532810916121, guid: e671f6df5ee10db47b68576c180a6f24, type: 3}
       propertyPath: m_LocalPosition.x

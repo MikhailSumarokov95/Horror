@@ -24,7 +24,7 @@ public class PickUp : MonoBehaviour
     private void Update()
     {
         SearchObject();
-        if (!gameManager.IsMobile && GameInput.Key.GetKeyDown("PickUp")) PickUpObject(); // Input.GetKeyDown(KeyCode.E)
+        if (!gameManager.IsMobile && GameInput.Key.GetKeyDown("PickUp")) PickUpObject();
     }
 
     public void PickUpObject()
@@ -57,12 +57,6 @@ public class PickUp : MonoBehaviour
             reward = flashlight.SetFullCharge;
             ShowPlayerTheyCanTakeItem(true, searchedObject);
         }
-        else if (hit.collider.CompareTag("Coin"))
-        {
-            searchedObject = hit.collider.gameObject;
-            reward = coins.PickUpCoin;
-            ShowPlayerTheyCanTakeItem(true, searchedObject);
-        }
         else if (hit.collider.CompareTag("Key"))
         {
             if (escapeMode == null) escapeMode = FindObjectOfType<EscapeMode>();
@@ -86,7 +80,6 @@ public class PickUp : MonoBehaviour
         }
         catch { }
         if (gameManager.IsMobile) pickUpButton.SetActive(value);
-        else pickUpText.SetActive(value);
     }
 
     delegate void Reward();
