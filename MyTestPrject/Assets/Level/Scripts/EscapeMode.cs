@@ -15,7 +15,8 @@ public class EscapeMode : Level
         _numberFoundKeysGO = GameObject.FindGameObjectWithTag("NumberFoundKeys");
         SetActivateChildTransform(_numberFoundKeysGO.transform, true);
         _numberFoundKeysText = _numberFoundKeysGO.transform.GetChild(0).GetComponent<TMP_Text>();
-        _numberFoundKeysText.text = "0";
+        //_numberFoundKeysText.text = "0";
+        SetTextNumberFoundKeys(0);
         _map.CreateRandomObjectsOnLevel(key, numberOfKeysToWinDependingOnTheLevelNumber[_difficultyLevelNumber]);
     }
 
@@ -28,7 +29,14 @@ public class EscapeMode : Level
     public void PickUpKey()
     {
         _numberFoundKeys++;
-        _numberFoundKeysText.text = _numberFoundKeys.ToString();
+        //_numberFoundKeysText.text = _numberFoundKeys.ToString();
+        SetTextNumberFoundKeys(_numberFoundKeys);
         if (_numberFoundKeys >= numberOfKeysToWinDependingOnTheLevelNumber[_difficultyLevelNumber]) WinLevel(); 
+    }
+
+    private void SetTextNumberFoundKeys(int number)
+    {
+        _numberFoundKeysText.text = 
+            number.ToString() + "/" + numberOfKeysToWinDependingOnTheLevelNumber[_difficultyLevelNumber].ToString();
     }
 }

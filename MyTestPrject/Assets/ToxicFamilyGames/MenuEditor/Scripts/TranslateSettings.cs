@@ -43,7 +43,6 @@ namespace ToxicFamilyGames.MenuEditor
                 return;
             }
             PlayerPrefs.SetString("selectedLanguage", language);
-            Debug.Log(language);
         }
 
         [ContextMenu("SwitchLanguage")]
